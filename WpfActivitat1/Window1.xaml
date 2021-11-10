@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfActivitat1.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfActivitat1"
+        mc:Ignorable="d"
+        Title="Exercici 1" Height="450" Width="800">
+    <Grid Margin="0,0,2,2" >
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="507*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="lbl_task" Content="Task Name:" HorizontalAlignment="Left" Margin="0,34,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="70"/>
+        <Label x:Name="lbl_descripcio" Content="Descripció:" HorizontalAlignment="Left" Margin="0,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.541,-0.946" Grid.Column="1" Height="26" Width="68"/>
+        <Label x:Name="lbl_responsable" Content="Responsables:" HorizontalAlignment="Left" Margin="0,192,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.541,-0.946" Grid.Column="1" Height="26" Width="84"/>
+        <Label x:Name="lbl_dataInici" Content="Data Inici: &#xD;&#xA;" HorizontalAlignment="Left" Margin="0,236,0,0" VerticalAlignment="Top" Height="24" RenderTransformOrigin="0.449,-0.474" Grid.Column="1" Width="65"/>
+        <Label x:Name="lbl_dataFinal" Content="Data Final: &#xD;&#xA;" HorizontalAlignment="Left" Margin="209,236,0,0" VerticalAlignment="Top" Height="25" RenderTransformOrigin="0.449,-0.474" Grid.Column="1" Width="68"/>
+        
+        <TextBox x:Name="txt_taskname" HorizontalAlignment="Left" Height="23" Margin="77,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" RenderTransformOrigin="0.201,2.395" TextChanged="Txt_titulo_TextChanged" TabIndex="1" Grid.Column="1"/>
+        <TextBox x:Name="txt_descripcio" HorizontalAlignment="Left" Height="89" Margin="3,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="394" RenderTransformOrigin="0.201,2.395" TextChanged="TextBox_Copy_TextChanged" TabIndex="2" Grid.Column="1"/>
+        <TextBox x:Name="txt_responsable" HorizontalAlignment="Left" Height="23" Margin="89,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="308" RenderTransformOrigin="0.201,2.395" TextChanged="TextBox_Copy1_TextChanged" TabIndex="3" Grid.Column="1"/>
+        <TextBox x:Name="txt_datainici" HorizontalAlignment="Left" Height="23" Margin="70,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" RenderTransformOrigin="0.201,2.395" TextChanged="TextBox_Copy1_TextChanged" TabIndex="3" Grid.Column="1"/>
+        <TextBox x:Name="txt_datafinal" HorizontalAlignment="Left" Height="23" Margin="282,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" RenderTransformOrigin="0.201,2.395" TextChanged="TextBox_Copy1_TextChanged" TabIndex="3" Grid.Column="1"/>
+       
+        <Button x:Name="btn_titulocompleto" Content="Enrere" HorizontalAlignment="Center" Margin="0,304,0,0" VerticalAlignment="Top" Width="130" Click="Btn_titulocompleto_Click" TabIndex="4" Grid.Column="1" Height="20"/>
+
+    </Grid>
+</Window>
