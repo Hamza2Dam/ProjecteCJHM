@@ -7,14 +7,44 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         mc:Ignorable="d"
         Title="Exercici 2" Height="225" Width="500">
     <Grid Margin="0,0,2,4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="67*"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="46*"/>
-            <ColumnDefinition Width="507*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="241*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="txt_nombre" HorizontalAlignment="Left" Height="23" Margin="171,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" Grid.Column="1" TextChanged="Txt_nombre_TextChanged" TabIndex="1"/>
-        <TextBox x:Name="txt_resultado" HorizontalAlignment="Left" Height="22" Margin="171,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="228" Grid.Column="1" IsEnabled="False" TextChanged="Txt_resultado_TextChanged"/>
-        <Label x:Name="lbl_entrarnombre" Content="Entra un nombre:" HorizontalAlignment="Left" Margin="27,69,0,0" VerticalAlignment="Top" Width="114" Grid.Column="1"/>
-        <Button x:Name="button" Content="Calcula" Grid.Column="1" HorizontalAlignment="Left" Margin="324,75,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.24,1.15" Click="Button_Click"/>
+        <Label x:Name="lbl_taskk" Content="Task Name:" HorizontalAlignment="Left" Margin="3,0,0,0" VerticalAlignment="Center" Height="26" Width="70" Grid.Column="1"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="18" Margin="70,0,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="133"/>
+        <Label Content="Description: " Margin="3,0,385,13" Grid.Row="1" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.523"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBox Text="TextBox" TextWrapping="Wrap" Grid.Column="1" Margin="72,6,45,10" Grid.Row="1"/>
+        <Label Content="Responsables: " Margin="3,0,373,0" Grid.Row="2" Grid.Column="1"/>
+        <ListBox Grid.Column="1" Margin="84,5,228,5" Grid.Row="2"/>
+        <Label Content="Colors:" Margin="3,0,373,0" Grid.Row="3" Grid.Column="1"/>
+        <CheckBox Content="Rojo" Grid.Column="1" Margin="54,5,352,5" Grid.Row="3"/>
+        <CheckBox Content="Amarillo" Grid.Column="1" Margin="110,5,280,5" Grid.Row="3"/>
+        <CheckBox Content="Verde" Grid.Column="1" Margin="181,5,222,5" Grid.Row="3"/>
+        <Label Content="Data de Inici: " Margin="3,0,377,0" Grid.Row="4" Grid.Column="1"/>
+        <DatePicker Grid.Column="1" Margin="80,3,259,3" Grid.Row="4"/>
+        <Label Content="Data Previsió Final: " Grid.Column="1" Margin="228,0,120,0" Grid.Row="4"/>
+        <DatePicker Grid.Column="1" Margin="337,3,0,3" Grid.Row="4"/>
+        <Button Content="ACEPTAR" RenderTransformOrigin="0.781,0.978" Margin="92,0,301,0" Grid.Column="1" Grid.Row="5" Height="25" VerticalAlignment="Center"/>
+        <Button Content="CANCELAR" RenderTransformOrigin="0.781,0.978" Margin="220,0,172,0" Grid.Column="1" Grid.Row="5" Height="25" VerticalAlignment="Center"/>
+
 
     </Grid>
 </Window>
