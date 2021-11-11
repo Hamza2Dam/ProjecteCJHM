@@ -26,7 +26,7 @@
         <TextBox x:Name="txt_datainici" HorizontalAlignment="Left" Height="23" Margin="70,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" RenderTransformOrigin="0.201,2.395" TextChanged="TextBox_Copy1_TextChanged" TabIndex="3" Grid.Column="1"/>
         <TextBox x:Name="txt_datafinal" HorizontalAlignment="Left" Height="23" Margin="282,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" RenderTransformOrigin="0.201,2.395" TextChanged="TextBox_Copy1_TextChanged" TabIndex="3" Grid.Column="1"/>
 
-        <Button x:Name="btn_titulocompleto" Content="Enrere" HorizontalAlignment="Left" Margin="340,336,0,0" VerticalAlignment="Top" Width="130" Click="Btn_titulocompleto_Click" TabIndex="4" Grid.Column="1" Height="20"/>
+        <Button x:Name="btn_titulocompleto" Content="Enrere" HorizontalAlignment="Left" Margin="399,309,0,0" VerticalAlignment="Top" Width="130" Click="Btn_titulocompleto_Click" TabIndex="4" Grid.Column="1" Height="20"/>
 
 
     </Grid>
