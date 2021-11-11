@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfActivitat1"
         mc:Ignorable="d"
-        Title="Window4" Height="450" Width="800">
+        Title="Donar d'Alta" Height="450" Width="800">
+    
     <Grid>
         
     </Grid>
+    
 </Window>
