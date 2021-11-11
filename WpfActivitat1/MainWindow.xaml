@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfActivitat1"
         mc:Ignorable="d"
-        Title="WPF-Activitat 1" Height="450" Width="800">
+        Title="TO DO TASK" Height="450" Width="800">
     <Grid>
-        <Button Name="Button_ex1" Content="Exercici 1" HorizontalAlignment="Center"  VerticalAlignment="Top" Height="54" Width="176" Margin="0,83,0,0" Click="Button_ex1_Click"/>
-        <Button Name="Button_ex2" Content="Exercici 2" HorizontalAlignment="Center"  VerticalAlignment="Top" Height="54" Width="176" Margin="0,159,0,0" Click="Button_ex2_Click"/>
-        <Button Name="Button_ex3" Content="Exercici 3" HorizontalAlignment="Center"  VerticalAlignment="Top" Height="54" Width="176" Click="Button_ex3_Click" Margin="0,234,0,0"/>
-        <Button Name="Button_ex4" Content="Exercici 4" HorizontalAlignment="Center"  VerticalAlignment="Top" Height="54" Width="176" Click="Button_ex4_Click" Margin="0,311,0,0"/>
+        <Button Name="Button_ex1" Content="Exercici 1" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="22" Width="166" Margin="83,105,0,0" Click="Button_ex1_Click"/>
+        <Button Name="Button_ex2" Content="Afegir Tasca" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="38" Width="118" Margin="24,28,0,0" Click="Button_ex2_Click" RenderTransformOrigin="0.769,-0.405"/>
+        <Button Name="Button_ex3" Content="Afegir Responsable" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="38" Width="118" Click="Button_ex3_Click" Margin="167,28,0,0"/>
+        <Button Name="Button_ex4" Content="Exercici 4" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="54" Width="176" Click="Button_ex4_Click" Margin="477,121,0,0"/>
     </Grid>
 </Window>
