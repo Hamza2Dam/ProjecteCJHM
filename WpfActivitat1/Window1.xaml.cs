@@ -22,23 +22,13 @@ namespace WpfActivitat1
             InitializeComponent();
         }
 
-                private void TextBox_Copy_TextChanged(object sender, TextChangedEventArgs e)
+        private void btn_Enrere_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow form = new MainWindow();
+            form.ShowDialog();
         }
 
-        private void TextBox_Copy1_TextChanged(object sender, TextChangedEventArgs e)
-        {
-        }
 
-        private void Btn_titulocompleto_Click(object sender, RoutedEventArgs e)
-        {
 
-           
-
-        }
-        private void Txt_titulo_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
     }
 }

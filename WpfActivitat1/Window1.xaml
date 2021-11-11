@@ -30,7 +30,7 @@
         <TextBox x:Name="txt_datainici" HorizontalAlignment="Left" Height="23" Margin="70,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" RenderTransformOrigin="0.201,2.395" TextChanged="TextBox_Copy1_TextChanged" TabIndex="3" Grid.Column="1" Grid.Row="1"/>
         <TextBox x:Name="txt_datafinal" HorizontalAlignment="Left" Height="23" Margin="282,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" RenderTransformOrigin="0.201,2.395" TextChanged="TextBox_Copy1_TextChanged" TabIndex="3" Grid.Column="1" Grid.Row="1"/>
 
-        <Button x:Name="btn_titulocompleto" Content="Enrere" HorizontalAlignment="Left" Margin="267,155,0,0" VerticalAlignment="Top" Width="130" Click="Btn_titulocompleto_Click" TabIndex="4" Grid.Column="1" Height="20" Grid.Row="1"/>
+        <Button x:Name="btn_Enrere" Content="Enrere" HorizontalAlignment="Left" Margin="267,155,0,0" VerticalAlignment="Top" Width="130" TabIndex="4" Grid.Column="1" Height="20" Grid.Row="1" Click="btn_Enrere_Click"/>
 
 
     </Grid>
