@@ -33,7 +33,7 @@ namespace WpfActivitat1
         private void Btn_titulocompleto_Click(object sender, RoutedEventArgs e)
         {
 
-            MessageBox.Show(txt_titulo.Text + ", " + txt_autor.Text + ", " + txt_año.Text, "Informació", MessageBoxButton.OK, MessageBoxImage.Information);
+           
 
         }
         private void Txt_titulo_TextChanged(object sender, TextChangedEventArgs e)
