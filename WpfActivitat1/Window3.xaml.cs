@@ -31,7 +31,7 @@ namespace WpfActivitat1
         {
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        /*private void Button_Click(object sender, RoutedEventArgs e)
         {
             double.TryParse(txt_precio.Text, out double num);
             double.TryParse(txt_iva.Text, out double iva);
@@ -48,7 +48,7 @@ namespace WpfActivitat1
                 txt_iva.Text = iva.ToString();
                 txt_pvp.Text = pvp.ToString();
 
-            }
+            }*/
 
         }
     }
