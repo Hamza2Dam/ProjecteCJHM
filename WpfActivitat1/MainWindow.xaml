@@ -7,9 +7,8 @@
         mc:Ignorable="d"
         Title="TO DO TASK" Height="450" Width="800">
     <Grid>
-        <Button Name="Button_ex1" Content="Exercici 1" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="22" Width="166" Margin="83,105,0,0" Click="Button_ex1_Click"/>
-        <Button Name="Button_ex2" Content="Afegir Tasca" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="38" Width="118" Margin="24,28,0,0" Click="Button_ex2_Click" RenderTransformOrigin="0.769,-0.405"/>
-        <Button Name="Button_ex3" Content="Afegir Responsable" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="38" Width="118" Click="Button_ex3_Click" Margin="167,28,0,0"/>
-        <Button Name="Button_ex4" Content="Exercici 4" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="54" Width="176" Click="Button_ex4_Click" Margin="426,163,0,0"/>
+        <Button Name="VeureTasca_Button" Content="SQL" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="22" Width="166" Margin="83,105,0,0" Click="VeureTasca_Button_Click"/>
+        <Button Name="AfegirTasca_Button" Content="Afegir Tasca" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="38" Width="118" Margin="24,28,0,0" Click="AfegirTasca_Button_Click"/>
+        <Button Name="AfegirResponsable_Button" Content="Afegir Responsable" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="38" Width="118" Margin="167,28,0,0" Click="AfegirResponsable_Button_Click" />
     </Grid>
 </Window>

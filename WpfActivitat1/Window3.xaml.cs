@@ -27,13 +27,32 @@ namespace WpfActivitat1
         }
 
 
-        private void Btn_boton1_TextChanged(object sender, TextChangedEventArgs e)
+        private void Donar_alta_Button_Click(object sender, TextChangedEventArgs e)
         {
+            Window4 form = new Window4();
+            form.ShowDialog();
         }
 
-       
-
+        private void Modificar_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Window5 form = new Window5();
+            form.ShowDialog();
         }
+        private void Eliminar_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Window6 form = new Window6();
+            form.ShowDialog();
+        }
+
+        private void Enrere_Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow form = new MainWindow();
+            form.ShowDialog();
+        }
+
+
+
     }
+}
 
 

@@ -25,28 +25,23 @@ namespace WpfActivitat1
             InitializeComponent();
         }
 
-        private void Button_ex1_Click(object sender, RoutedEventArgs e)
+        private void VeureTasca_Button_Click(object sender, RoutedEventArgs e)
         {
             Window1 form = new Window1();
             form.ShowDialog();
         }
 
-        private void Button_ex2_Click(object sender, RoutedEventArgs e)
+        private void AfegirTasca_Button_Click(object sender, RoutedEventArgs e)
         {
             Window2 form = new Window2();
             form.ShowDialog();
         }
 
-        private void Button_ex3_Click(object sender, RoutedEventArgs e)
+        private void AfegirResponsable_Button_Click(object sender, RoutedEventArgs e)
         {
             Window3 form = new Window3();
             form.ShowDialog();
         }
 
-        private void Button_ex4_Click(object sender, RoutedEventArgs e)
-        {
-            Window4 form = new Window4();
-            form.ShowDialog();
-        }
     }
 }

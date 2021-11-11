@@ -7,10 +7,11 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         mc:Ignorable="d"
         Title="Afegir" Height="391.5" Width="413">
     <Grid>
-        <Button x:Name="Donar_alta" Content="Modificar" HorizontalAlignment="Center" Margin="0,153,0,0" VerticalAlignment="Top" Width="253" Height="35" Click="Button_Click"/>
-        <Button x:Name="Modificar" Content="Donar d'alta" HorizontalAlignment="Center" Margin="0,70,0,0" VerticalAlignment="Top" Width="253" Height="34" Click="Button_Click"/>
-        <Button x:Name="Eliminar" Content="Eliminar" HorizontalAlignment="Center" Margin="0,242,0,0" VerticalAlignment="Top" Width="253" Height="35" Click="Button_Click"/>
-        <Button x:Name="Enrere" Content="Enrere" HorizontalAlignment="Left" Margin="289,316,0,0" VerticalAlignment="Top" Width="94" Height="35" Click="Button_Click"/>
+
+        <Button x:Name="Donar_alta" Content="Donar d'alta" HorizontalAlignment="Center" Margin="0,70,0,0" VerticalAlignment="Top" Width="253" Height="34" Click="Donar_alta_Button_Click"/>
+        <Button x:Name="Modificar" Content="Modificar" HorizontalAlignment="Center" Margin="0,153,0,0" VerticalAlignment="Top" Width="253" Height="35" Click="Modificar_Button_Click"/>
+        <Button x:Name="Eliminar" Content="Eliminar" HorizontalAlignment="Center" Margin="0,242,0,0" VerticalAlignment="Top" Width="253" Height="35" Click="Eliminar_Button_Click"/>
+        <Button x:Name="Enrere" Content="Enrere" HorizontalAlignment="Left" Margin="289,316,0,0" VerticalAlignment="Top" Width="94" Height="35" Click="Enrere_Button_Click"/>
 
     </Grid>
 </Window>
