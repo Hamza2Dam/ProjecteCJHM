@@ -8,12 +8,12 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         Title="Exercici 2" Height="400" Width="700">
     <Grid Margin="0,0,2,4">
         <Grid.RowDefinitions>
-            <RowDefinition Height="30*"/>
-            <RowDefinition Height="67*"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="140*"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="8*"/>
@@ -31,19 +31,19 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <TextBox Text="TextBox" TextWrapping="Wrap" Grid.Column="1" Margin="72,6,45,10" Grid.Row="1"/>
-        <Label Content="Responsables: " Margin="3,0,373,0" Grid.Row="2" Grid.Column="1"/>
-        <ListBox Grid.Column="1" Margin="84,5,228,5" Grid.Row="2"/>
-        <Label Content="Colors:" Margin="3,0,373,0" Grid.Row="3" Grid.Column="1"/>
-        <CheckBox Content="Rojo" Grid.Column="1" Margin="54,5,352,5" Grid.Row="3"/>
-        <CheckBox Content="Amarillo" Grid.Column="1" Margin="110,5,280,5" Grid.Row="3"/>
-        <CheckBox Content="Verde" Grid.Column="1" Margin="181,5,222,5" Grid.Row="3"/>
-        <Label Content="Data de Inici: " Margin="3,0,377,0" Grid.Row="4" Grid.Column="1"/>
-        <DatePicker Grid.Column="1" Margin="80,3,259,3" Grid.Row="4"/>
-        <Label Content="Data Previsió Final: " Grid.Column="1" Margin="228,0,120,0" Grid.Row="4"/>
-        <DatePicker Grid.Column="1" Margin="337,3,0,3" Grid.Row="4"/>
-        <Button Content="ACEPTAR" RenderTransformOrigin="0.781,0.978" Margin="92,0,301,0" Grid.Column="1" Grid.Row="5" Height="25" VerticalAlignment="Center"/>
-        <Button Content="CANCELAR" RenderTransformOrigin="0.781,0.978" Margin="220,0,172,0" Grid.Column="1" Grid.Row="5" Height="25" VerticalAlignment="Center"/>
+        <TextBox Text="TextBox" TextWrapping="Wrap" Grid.Column="1" Margin="72,6,45,35" Grid.Row="1"/>
+        <Label Content="Responsables: " Margin="3,6,589,6" Grid.Row="2" Grid.Column="1"/>
+        <ListBox Grid.Column="1" Margin="92,9,220,10" Grid.Row="2"/>
+        <Label Content="Colors:" Margin="3,4,373,0" Grid.Row="3" Grid.Column="1"/>
+        <CheckBox Content="Rojo" Grid.Column="1" Margin="55,11,566,11" Grid.Row="3"/>
+        <CheckBox Content="Amarillo" Grid.Column="1" Margin="115,11,490,11" Grid.Row="3"/>
+        <CheckBox Content="Verde" Grid.Column="1" Margin="191,11,432,11" Grid.Row="3"/>
+        <Label Content="Data de Inici: " Margin="3,13,596,12" Grid.Row="4" Grid.Column="1"/>
+        <DatePicker Grid.Column="1" Margin="80,14,448,14" Grid.Row="4"/>
+        <Label Content="Data Previsió Final: " Grid.Column="1" Margin="293,12,275,12" Grid.Row="4"/>
+        <DatePicker Grid.Column="1" Margin="406,14,121,14" Grid.Row="4"/>
+        <Button Content="ACEPTAR" RenderTransformOrigin="0.781,0.978" Margin="182,0,373,0" Grid.Column="1" Grid.Row="5" Height="25" VerticalAlignment="Center"/>
+        <Button Content="ACEPTAR" RenderTransformOrigin="0.781,0.978" Margin="375,0,181,0" Grid.Column="1" Grid.Row="5" Height="25" VerticalAlignment="Center"/>
 
 
     </Grid>
