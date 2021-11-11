@@ -28,25 +28,9 @@ namespace WpfActivitat1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            int.TryParse(txt_nombre.Text, out int num);
+          
 
 
-            if (num % 5 == 0)
-            {
-                txt_resultado.Text = "El nombre és múltiple de 5 ";
-
-            }
-            else
-            {
-                txt_resultado.Text = "El nombre NO és múltiple de 5! ";
-            }
-
-            {
-                if (!txt_nombre.Text.All(Char.IsDigit))
-                {
-                    MessageBox.Show("Porfavor introduce un numero", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-            }
 
         }
 

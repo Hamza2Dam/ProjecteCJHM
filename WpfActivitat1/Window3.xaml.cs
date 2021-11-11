@@ -31,24 +31,7 @@ namespace WpfActivitat1
         {
         }
 
-        /*private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            double.TryParse(txt_precio.Text, out double num);
-            double.TryParse(txt_iva.Text, out double iva);
-            double.TryParse(txt_pvp.Text, out double pvp);
-
-            if (num <= 0)
-            {
-                MessageBox.Show("Porfavor Introduce Un Numero Valido!", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-            else
-            {
-                iva = num * 0.15;
-                pvp = num - iva;
-                txt_iva.Text = iva.ToString();
-                txt_pvp.Text = pvp.ToString();
-
-            }*/
+       
 
         }
     }
