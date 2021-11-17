@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -8,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfActivitat1
@@ -22,23 +25,34 @@ namespace WpfActivitat1
             InitializeComponent();
         }
 
-                private void TextBox_Copy_TextChanged(object sender, TextChangedEventArgs e)
+        private void txt_taskname1(object sender, TextChangedEventArgs e)
         {
         }
 
-        private void TextBox_Copy1_TextChanged(object sender, TextChangedEventArgs e)
+        private void txt_descripcio1(object sender, TextChangedEventArgs e)
         {
         }
 
-        private void Btn_titulocompleto_Click(object sender, RoutedEventArgs e)
+        private void txt_responsable1(object sender, TextChangedEventArgs e)
         {
-
-           
-
         }
-        private void Txt_titulo_TextChanged(object sender, TextChangedEventArgs e)
+
+        private void txt_datainici1(object sender, TextChangedEventArgs e)
         {
-
         }
+
+        private void txt_datafinal1(object sender, TextChangedEventArgs e)
+        {
+        }
+
+
+        private void btn_Enrere_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow form = new MainWindow();
+            form.ShowDialog();
+        }
+
+
+
     }
 }
