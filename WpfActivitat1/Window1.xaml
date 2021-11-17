@@ -21,7 +21,7 @@
         <TextBox x:Name="txt_datainici"     HorizontalAlignment="Left" Height="23" Margin="140,249,0,0"   TextWrapping="Wrap" VerticalAlignment="Top" Width="115" RenderTransformOrigin="0.201,2.395" TextChanged="txt_datainici1" TabIndex="3"/>
         <TextBox x:Name="txt_datafinal"     HorizontalAlignment="Left" Height="23" Margin="372,248,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="115" RenderTransformOrigin="0.201,2.395" TextChanged="txt_datafinal1" TabIndex="3"/>
 
-        <Button x:Name="btn_Enrere" Content="Enrere"  HorizontalAlignment="Left" Margin="247,323,0,0" VerticalAlignment="Top" Width="130" TabIndex="4" Height="20" Click="btn_Enrere_Click"/>
+        <Button x:Name="btn_Enrere" Content="Enrere"  HorizontalAlignment="Left" Margin="269,330,0,0" VerticalAlignment="Top" Width="130" TabIndex="4" Height="20" Click="btn_Enrere_Click"/>
 
     </Grid>
 </Window>
