@@ -6,11 +6,11 @@
         xmlns:local="clr-namespace:WpfActivitat1"
         mc:Ignorable="d"
         Title="TO DO TASK" Height="450" Width="800">
-    
+
     <Grid>
-        <Button Name="VeureTasca_Button"        Content="SQL"                   HorizontalAlignment="Left"  VerticalAlignment="Top" Height="22" Width="166" Margin="83,105,0,0" Click="VeureTasca_Button_Click"/>
+        <Button Name="VeureTasca_Button"        Content="SQL"                   HorizontalAlignment="Left"  VerticalAlignment="Top" Height="22" Width="166" Margin="106,107,0,0" Click="VeureTasca_Button_Click"/>
         <Button Name="AfegirTasca_Button"       Content="Afegir Tasca"          HorizontalAlignment="Left"  VerticalAlignment="Top" Height="38" Width="118" Margin="24,28,0,0"  Click="AfegirTasca_Button_Click"/>
         <Button Name="AfegirResponsable_Button" Content="Afegir Responsable"    HorizontalAlignment="Left"  VerticalAlignment="Top" Height="38" Width="118" Margin="167,28,0,0" Click="AfegirResponsable_Button_Click"/>
     </Grid>
-    
+
 </Window>
