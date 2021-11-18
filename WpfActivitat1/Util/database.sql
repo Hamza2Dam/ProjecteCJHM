@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS Tasca (
     Responsable VARCHAR(100) NOT NULL,
     Colors ENUM(red,yellow, green)NOT NULL,
     Data_final date NOT NULL,
-    data_inici date NOT NULL;
+    data_inici date NOT NULL
 
    
        
