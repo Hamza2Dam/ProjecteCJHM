@@ -1,5 +1,5 @@
-﻿using SQLiteExampleV2.Entity;
-using SQLiteExampleV2.Persistence;
+﻿using SQLiteWpfActivitat1.Entitats;
+using SQLiteWpfActivitat1.Persistence;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ namespace SQLiteExampleV2.Service
 {
     public class UserService
     {
-
+       
         /// <summary>
         /// Obté tots els usuaris
         /// </summary>
@@ -59,7 +59,7 @@ namespace SQLiteExampleV2.Service
                     command.Parameters.Add(new SQLiteParameter("lastname", user.LastName));
                     command.Parameters.Add(new SQLiteParameter("birthday", user.Birthday));
 
-                    rows_afected = command.ExecuteNonQuery();
+                    rows_afected  = command.ExecuteNonQuery();
                 }
             }
 
@@ -104,8 +104,8 @@ namespace SQLiteExampleV2.Service
                 string query = "DELETE FROM Users WHERE Id = ?";
                 using (var command = new SQLiteCommand(query, ctx))
                 {
-                    command.Parameters.Add(new SQLiteParameter("birthday", Id));
-                    rows_afected = command.ExecuteNonQuery();
+                   command.Parameters.Add(new SQLiteParameter("birthday", Id));
+                   rows_afected = command.ExecuteNonQuery();
                 }
             }
 
