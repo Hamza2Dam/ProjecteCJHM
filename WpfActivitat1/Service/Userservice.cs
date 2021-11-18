@@ -1,6 +1,4 @@
 ﻿using SQLiteWpfActivitat1.Entitats;
-
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
