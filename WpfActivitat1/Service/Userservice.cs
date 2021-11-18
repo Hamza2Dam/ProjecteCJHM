@@ -1,9 +1,11 @@
 ﻿using SQLiteWpfActivitat1.Entitats;
-using SQLiteWpfActivitat1.Persistence;
+
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data.SQLite;
+using SQLiteExampleV2.Persistence;
 
 namespace SQLiteExampleV2.Service
 {
@@ -14,9 +16,9 @@ namespace SQLiteExampleV2.Service
         /// Obté tots els usuaris
         /// </summary>
         /// <returns></returns>
-        public static List<User> GetAll()
+        public static List<Responsable> GetAll()
         {
-            var result = new List<User>();
+            var result = new List<Responsable>();
 
             using (var ctx = DbContext.GetInstance())
             {
@@ -28,7 +30,7 @@ namespace SQLiteExampleV2.Service
                     {
                         while (reader.Read())
                         {
-                            result.Add(new User
+                            result.Add(new Responsable
                             {
                                 Id = Convert.ToInt32(reader["id"].ToString()),
                                 Name = reader["Name"].ToString(),
@@ -47,7 +49,7 @@ namespace SQLiteExampleV2.Service
         /// </summary>
         /// <param name="user">Entitat usuari</param>
         /// <returns>El número d'usuaris afegits</returns>
-        public int Add(User user)
+        public int Add(Responsable user)
         {
             int rows_afected = 0;
             using (var ctx = DbContext.GetInstance())
@@ -71,7 +73,7 @@ namespace SQLiteExampleV2.Service
         /// </summary>
         /// <param name="user">Entitat usuari que es vol modificar</param>
         /// <returns>El número de usuaris modificats</returns>
-        public int Update(User user)
+        public int Update(Responsable user)
         {
             int rows_afected = 0;
             using (var ctx = DbContext.GetInstance())

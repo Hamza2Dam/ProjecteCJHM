@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WpfActivitat1.Entitats
+namespace SQLiteWpfActivitat1.Entitats
 {
-    class Tasca
+    public class Tasca
     {
         public int Id { get; set; }
         public string Nom { get; set; }
