@@ -25,34 +25,6 @@ namespace WpfActivitat1
             InitializeComponent();
         }
 
-        private void txt_taskname1(object sender, TextChangedEventArgs e)
-        {
-        }
-
-        private void txt_descripcio1(object sender, TextChangedEventArgs e)
-        {
-        }
-
-        private void txt_responsable1(object sender, TextChangedEventArgs e)
-        {
-        }
-
-        private void txt_datainici1(object sender, TextChangedEventArgs e)
-        {
-        }
-
-        private void txt_datafinal1(object sender, TextChangedEventArgs e)
-        {
-        }
-
-
-        private void btn_Enrere_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow form = new MainWindow();
-            form.ShowDialog();
-        }
-
-
 
     }
 }

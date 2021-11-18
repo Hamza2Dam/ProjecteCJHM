@@ -26,23 +26,10 @@ namespace WpfActivitat1
             InitializeComponent();
         }
 
-        private void txt_taskname1(object sender, TextChangedEventArgs e)
+
+        private void Aceptar_Button(object sender, RoutedEventArgs e)
         {
-        }
-
-        private void txt_descripcio1(object sender, TextChangedEventArgs e)
-        {
-        }
-
-        private void txt_responsable1(object sender, TextChangedEventArgs e)
-        {
-        }
-
-
-
-        private void Aceptar_Button_Click(object sender, TextChangedEventArgs e)
-        {
-            MainWindow form = new MainWindow();
+            Window1 form = new Window1();
             form.ShowDialog();
         }
 
