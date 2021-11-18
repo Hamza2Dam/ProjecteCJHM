@@ -14,15 +14,15 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace SQLiteExampleV2.View
+namespace WpfActivitat1
 {
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class WindowListBox : Window
+    public partial class Window3 : Window
     {
 
-        public WindowListBox()
+        public Window3()
         {
             InitializeComponent();
         }
