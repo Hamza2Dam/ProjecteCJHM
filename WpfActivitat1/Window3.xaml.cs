@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SQLiteWpfActivitat1.Entitats;
+using SQLiteExampleV2.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,41 +12,39 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-
-namespace WpfActivitat1
+namespace SQLiteExampleV2.View
 {
     /// <summary>
-    /// Lógica de interacción para Window3.xaml
+    /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class Window3 : Window
+    public partial class WindowListBox : Window
     {
-        public Window3()
+
+        public WindowListBox()
         {
             InitializeComponent();
         }
 
-        private void Donar_alta_Click(object sender, RoutedEventArgs e)
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Window4 form = new Window4();
-            form.ShowDialog();
+            //Enllacem el control visual amb les dades
+            listViewUsers.ItemsSource = UserService.GetAll();
         }
 
-        private void Modificar_Click(object sender, RoutedEventArgs e)
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
-            Window5 form = new Window5();
-            form.ShowDialog();
-        }
+            //Agafem les dades del item seleccionat
+            var item = ((ListBoxItem)listViewUsers.ContainerFromElement((Button)sender)).Content;
 
-        private void Eliminar_Click(object sender, RoutedEventArgs e)
-        {
-            Window6 form = new Window6();
-            form.ShowDialog();
+            //Li passem l'usuari seleccionat al formulari Edit
+            Responsable user = (Responsable)item;
+            WindowEditUser w = new WindowEditUser(user);
+            w.ShowDialog();
         }
 
     }
 }
-
 
