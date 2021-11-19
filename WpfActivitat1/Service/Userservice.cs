@@ -20,7 +20,7 @@ namespace SQLiteExampleV2.Service
 
             using (var ctx = DbContext.GetInstance())
             {
-                var query = "SELECT * FROM Users";
+                var query = "SELECT * FROM Responsable";
 
                 using (var command = new SQLiteCommand(query, ctx))
                 {

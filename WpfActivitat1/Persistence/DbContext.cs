@@ -41,7 +41,7 @@ namespace SQLiteExampleV2.Persistence
 
                     for (var i = 1; i <= 100; i++)
                     {
-                        var query = "INSERT INTO Users (name, lastname, birthday) VALUES (?, ?, ?)";
+                        var query = "INSERT INTO Responsable (name, lastname, birthday) VALUES (?, ?, ?)";
 
                         using (var command = new SQLiteCommand(query, ctx))
                         {
