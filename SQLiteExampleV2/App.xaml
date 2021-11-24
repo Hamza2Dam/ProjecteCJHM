@@ -1,8 +1,8 @@
-﻿<Application x:Class="WpfActivitat1.App"
+﻿<Application x:Class="SQLiteExampleV2.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:WpfActivitat1"
-             StartupUri="MainWindow.xaml">
+             xmlns:local="clr-namespace:SQLiteExampleV2"
+             StartupUri="View/MainWindow.xaml">
     <Application.Resources>
          
     </Application.Resources>

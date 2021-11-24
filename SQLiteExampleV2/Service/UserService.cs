@@ -1,9 +1,9 @@
-﻿using SQLiteWpfActivitat1.Entitats;
+﻿using SQLiteExampleV2.Entity;
+using SQLiteExampleV2.Persistence;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data.SQLite;
-using SQLiteExampleV2.Persistence;
 
 namespace SQLiteExampleV2.Service
 {
@@ -14,13 +14,13 @@ namespace SQLiteExampleV2.Service
         /// Obté tots els usuaris
         /// </summary>
         /// <returns></returns>
-        public static List<Responsable> GetAll()
+        public static List<User> GetAll()
         {
-            var result = new List<Responsable>();
+            var result = new List<User>();
 
             using (var ctx = DbContext.GetInstance())
             {
-                var query = "SELECT * FROM Responsable";
+                var query = "SELECT * FROM Users";
 
                 using (var command = new SQLiteCommand(query, ctx))
                 {
@@ -28,7 +28,7 @@ namespace SQLiteExampleV2.Service
                     {
                         while (reader.Read())
                         {
-                            result.Add(new Responsable
+                            result.Add(new User
                             {
                                 Id = Convert.ToInt32(reader["id"].ToString()),
                                 Name = reader["Name"].ToString(),
@@ -45,10 +45,9 @@ namespace SQLiteExampleV2.Service
         /// <summary>
         /// Afegeix un nou usuari a la base de dades
         /// </summary>
-        /// <param name="Responsable">Entitat usuari</param>
+        /// <param name="user">Entitat usuari</param>
         /// <returns>El número d'usuaris afegits</returns>
-        public int Add(Responsable Responsable
-            )
+        public int Add(User user)
         {
             int rows_afected = 0;
             using (var ctx = DbContext.GetInstance())
@@ -56,9 +55,9 @@ namespace SQLiteExampleV2.Service
                 string query = "INSERT INTO Users (name, lastname, birthday) VALUES (?, ?, ?)";
                 using (var command = new SQLiteCommand(query, ctx))
                 {
-                    command.Parameters.Add(new SQLiteParameter("name", Responsable.Name));
-                    command.Parameters.Add(new SQLiteParameter("lastname", Responsable.LastName));
-                    command.Parameters.Add(new SQLiteParameter("birthday", Responsable.Birthday));
+                    command.Parameters.Add(new SQLiteParameter("name", user.Name));
+                    command.Parameters.Add(new SQLiteParameter("lastname", user.LastName));
+                    command.Parameters.Add(new SQLiteParameter("birthday", user.Birthday));
 
                     rows_afected  = command.ExecuteNonQuery();
                 }
@@ -70,9 +69,9 @@ namespace SQLiteExampleV2.Service
         /// <summary>
         /// Actualitza un usuari
         /// </summary>
-        /// <param name="Responsable">Entitat usuari que es vol modificar</param>
+        /// <param name="user">Entitat usuari que es vol modificar</param>
         /// <returns>El número de usuaris modificats</returns>
-        public int Update(Responsable Responsable)
+        public int Update(User user)
         {
             int rows_afected = 0;
             using (var ctx = DbContext.GetInstance())
@@ -80,10 +79,10 @@ namespace SQLiteExampleV2.Service
                 string query = "UPDATE Users SET name = ?, lastname = ?, birthday = ? WHERE Id = ?";
                 using (var command = new SQLiteCommand(query, ctx))
                 {
-                    command.Parameters.Add(new SQLiteParameter("name", Responsable.Name));
-                    command.Parameters.Add(new SQLiteParameter("Lastname", Responsable.LastName));
-                    command.Parameters.Add(new SQLiteParameter("Birthday", Responsable.Birthday));
-                    command.Parameters.Add(new SQLiteParameter("Id", Responsable.Id));
+                    command.Parameters.Add(new SQLiteParameter("name", user.Name));
+                    command.Parameters.Add(new SQLiteParameter("Lastname", user.LastName));
+                    command.Parameters.Add(new SQLiteParameter("Birthday", user.Birthday));
+                    command.Parameters.Add(new SQLiteParameter("Id", user.Id));
 
                     rows_afected = command.ExecuteNonQuery();
                 }
@@ -102,10 +101,10 @@ namespace SQLiteExampleV2.Service
             int rows_afected = 0;
             using (var ctx = DbContext.GetInstance())
             {
-                string query = "DELETE FROM Responsable WHERE Id = ?";
+                string query = "DELETE FROM Users WHERE Id = ?";
                 using (var command = new SQLiteCommand(query, ctx))
                 {
-                   command.Parameters.Add(new SQLiteParameter("birthday", Id));
+                   command.Parameters.Add(new SQLiteParameter("Id", Id));
                    rows_afected = command.ExecuteNonQuery();
                 }
             }

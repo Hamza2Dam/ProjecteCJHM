@@ -1,0 +1,47 @@
+﻿<Window x:Class="SQLiteExampleV2.View.WindowResponsables"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SQLiteExampleV2.View"
+        mc:Ignorable="d"
+        Title="Responsables" Height="450" Width="500" Loaded="Window_Loaded">
+    <Grid>
+        <DataGrid x:Name="dgUsers" VerticalAlignment="Top" HorizontalAlignment="Left" Width="Auto"
+          AutoGenerateColumns="False" CanUserResizeColumns="True" CanUserAddRows="False" SelectionChanged="dgUsers_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" IsReadOnly="True" Binding="{Binding Id}" Width="50"/>
+                <DataGridTextColumn Header="Nom" IsReadOnly="True" Binding="{Binding Name}" Width="Auto"/>
+                <DataGridTextColumn Header="Cognom" IsReadOnly="True" Binding="{Binding LastName}" Width="Auto"/>
+                <DataGridTextColumn Header="Data Naixement" IsReadOnly="True" Binding="{Binding Birthday}" Width="Auto"/>
+                <!--Añadimos botones editar y eliminar-->
+
+                <!--Boton Afegir -->
+                <DataGridTemplateColumn Header="Afegir" Width="60" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Afegir" Click="AfegirUsuari" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <!--Boton Modificar -->
+                <DataGridTemplateColumn Header="Modificar" Width="60" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Modificar" Click="ModificarUsuari" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <!--Boton Eliminar -->
+                <DataGridTemplateColumn Header="Eliminar" Width="60">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Eliminar" Click="EliminarUsuari"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

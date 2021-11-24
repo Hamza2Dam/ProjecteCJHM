@@ -1,4 +1,4 @@
-﻿using SQLiteWpfActivitat1.Entitats;
+﻿using SQLiteExampleV2.Entity;
 using SQLiteExampleV2.Service;
 using System;
 using System.Collections.Generic;
@@ -14,17 +14,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WpfActivitat1
+namespace SQLiteExampleV2.View
 {
     /// <summary>
     /// Interaction logic for WindowEditUser.xaml
     /// </summary>
-    public partial class WindowEditUser : Window
+    public partial class WindowModificarResponsables : Window
     {
 
-        Responsable user;
+        User oUser;
 
-        public WindowEditUser()
+        public WindowModificarResponsables()
         {
             InitializeComponent();
         }
@@ -34,12 +34,12 @@ namespace WpfActivitat1
         /// com per exemple accedir a través d'una property
         /// </summary>
         /// <param name="user"></param>
-        public WindowEditUser(Responsable user)
+        public WindowModificarResponsables(User user)
         {
             InitializeComponent();
-
-            this.user = user;
-
+            
+            oUser = user;
+            
             //Li estem dient amb que farà l'enllaç (quan fem el binding en el disseny) 
             this.DataContext = user;
         }
@@ -49,7 +49,7 @@ namespace WpfActivitat1
             try
             {
                 UserService userService = new UserService();
-                userService.Update(user);
+                userService.Update(oUser);
                 this.Close();
             }
             catch (Exception ex)
