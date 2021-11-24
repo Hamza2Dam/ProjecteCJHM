@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SQLiteExampleV2.View"
         mc:Ignorable="d"
-        Title="Tasca" Height="450" Width="500" Loaded="Window_Loaded2">
+        Title="Tasca" Height="450" Width="800" Loaded="Window_Loaded2">
     <Grid>
         
-        <DataGrid x:Name="dgTasca" VerticalAlignment="Top" HorizontalAlignment="Left" Width="478"
+        <DataGrid x:Name="dgTasca" VerticalAlignment="Top" HorizontalAlignment="Left" Width="Auto"
           AutoGenerateColumns="False" CanUserResizeColumns="True" CanUserAddRows="False" SelectionChanged="dgTasca_SelectionChanged" >
 
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Codi" IsReadOnly="True" Binding="{Binding Codi}" Width="Auto"/>
+                <DataGridTextColumn Header="Codi" IsReadOnly="True" Binding="{Binding Codi}" Width="30"/>
                 <DataGridTextColumn Header="Nom" IsReadOnly="True" Binding="{Binding Nom}" Width="Auto"/>
                 <DataGridTextColumn Header="Descripcio" IsReadOnly="True" Binding="{Binding Descripcio}" Width="80"/>
                 <DataGridTextColumn Header="Responsable" IsReadOnly="True" Binding="{Binding Responsable}" Width="Auto"/>

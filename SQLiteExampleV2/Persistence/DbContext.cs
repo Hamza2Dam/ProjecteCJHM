@@ -6,7 +6,7 @@ namespace SQLiteExampleV2.Persistence
 {
     public class DbContext
     {
-        private const string DBName = "database.sqlite";
+        private const string DBName = "database3.sqlite";
         private const string SQLScript = @"..\..\..\Util\database.sql";
         private static bool IsDbRecentlyCreated = false;
 
@@ -39,7 +39,7 @@ namespace SQLiteExampleV2.Persistence
                         }
                     }
 
-                    for (var i = 1; i <= 100; i++)
+                    for (var i = 1; i <= 15; i++)
                     {
                         var query = "INSERT INTO Users (name, lastname, birthday) VALUES (?, ?, ?)";
 
@@ -56,7 +56,7 @@ namespace SQLiteExampleV2.Persistence
                         }
                     }
 
-                    for (var i = 1; i <= 100; i++)
+                    for (var i = 1; i <= 10; i++)
                     {
                         var query = "INSERT INTO Tasca (Nom, Descripcio, Responsable, Colors, Data_Inici, Data_Final) VALUES (?, ?, ?, ?, ?, ?)";
 
