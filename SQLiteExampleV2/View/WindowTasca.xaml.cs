@@ -28,7 +28,16 @@ namespace SQLiteExampleV2.View
 
         private void Window_Loaded2(object sender, RoutedEventArgs e)
         {
-            dgUsers.ItemsSource = UserService.GetAll();
+            dgTasca.ItemsSource = TascaService.GetAll();
+        }
+
+        private void AddTasca(object sender, RoutedEventArgs e)
+        {
+            //Agafem les dades del item seleccionat
+            Tasca oTasca = (Tasca)dgTasca.SelectedItem;
+            //Li passem l'usuari seleccionat al formulari Edit
+            WindowAfegirTasca w = new WindowAfegirTasca(oTasca);
+            w.ShowDialog();
         }
 
         private void dgTasca_SelectionChanged(object sender, SelectionChangedEventArgs e)

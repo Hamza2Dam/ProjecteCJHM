@@ -8,7 +8,7 @@
         Title="Tasca" Height="450" Width="500" Loaded="Window_Loaded2">
     <Grid>
         
-        <DataGrid x:Name="dgUsers" VerticalAlignment="Top" HorizontalAlignment="Left" Width="478"
+        <DataGrid x:Name="dgTasca" VerticalAlignment="Top" HorizontalAlignment="Left" Width="478"
           AutoGenerateColumns="False" CanUserResizeColumns="True" CanUserAddRows="False" SelectionChanged="dgTasca_SelectionChanged" >
 
             <DataGrid.Columns>
@@ -23,8 +23,7 @@
                 <DataGridTemplateColumn Header="AfegirTasca" Width="Auto" >
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="AfegirTasca" />
-                        </DataTemplate>
+                            <Button Content="AfegirTasca" Click="AddTasca" />                        </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
