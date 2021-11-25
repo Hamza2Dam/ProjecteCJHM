@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Responsables" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        <DataGrid x:Name="dgUsers" VerticalAlignment="Top" HorizontalAlignment="Left" Width="431"
+        <DataGrid x:Name="dgUsers" VerticalAlignment="Top" HorizontalAlignment="Left" Width="Auto"
           AutoGenerateColumns="False" CanUserResizeColumns="True" CanUserAddRows="False" SelectionChanged="dgUsers_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" IsReadOnly="True" Binding="{Binding Id}" Width="50"/>

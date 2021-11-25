@@ -6,7 +6,7 @@ namespace SQLiteExampleV2.Persistence
 {
     public class DbContext
     {
-        private const string DBName = "database3.sqlite";
+        private const string DBName = "database7.sqlite";
         private const string SQLScript = @"..\..\..\Util\database.sql";
         private static bool IsDbRecentlyCreated = false;
 
@@ -46,8 +46,8 @@ namespace SQLiteExampleV2.Persistence
                         using (var command = new SQLiteCommand(query, ctx))
                         {
                   
-                            command.Parameters.Add(new SQLiteParameter("name", "Name " + i));
-                            command.Parameters.Add(new SQLiteParameter("lastname", "Lastname " + i));
+                            command.Parameters.Add(new SQLiteParameter("name", ""));
+                            command.Parameters.Add(new SQLiteParameter("lastname", "" ));
 
                             var rnd = new Random();
                             command.Parameters.Add(new SQLiteParameter("birthday", DateTime.Today.AddYears(-rnd.Next(1, 50))));
@@ -63,10 +63,10 @@ namespace SQLiteExampleV2.Persistence
                         using (var command = new SQLiteCommand(query, ctx))
                         {
 
-                            command.Parameters.Add(new SQLiteParameter("Nom", "Nom " + i));
-                            command.Parameters.Add(new SQLiteParameter("Descripcio", "Descripcio " + i));
-                            command.Parameters.Add(new SQLiteParameter("Responsable", "Responsable " + i));
-                            command.Parameters.Add(new SQLiteParameter("Colors", "Colors " + i));
+                            command.Parameters.Add(new SQLiteParameter("Nom", "" ));
+                            command.Parameters.Add(new SQLiteParameter("Descripcio", ""));
+                            command.Parameters.Add(new SQLiteParameter("Responsable", ""));
+                            command.Parameters.Add(new SQLiteParameter("Colors", " " ));
 
                             var rnd = new Random();
                             command.Parameters.Add(new SQLiteParameter("Data_Inici", DateTime.Today.AddYears(-rnd.Next(1, 50))));

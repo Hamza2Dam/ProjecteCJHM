@@ -24,7 +24,7 @@
         </Grid.ColumnDefinitions>
 
         <Label Content="Codi:" Grid.Row="0" Grid.Column="0" Margin="17,0,27,5"/>
-        <TextBlock Name="Codi" Grid.Row="0" Grid.Column="1" Text="{Binding Codi}" Margin="9,4,16,5" ></TextBlock>
+        <TextBlock Name="Codi" Grid.Row="0" Grid.Column="1" Text="{Binding Codi}" Margin="9,4,16,5" />
 
         <Label Content="Nom:" Grid.Row="1" Grid.Column="0" Margin="17,0,27,5"/>
         <TextBox Name="Nom" Grid.Row="1" Grid.Column="1" Text="{Binding Nom}"  Margin="9,4,16,5"/>
@@ -32,20 +32,20 @@
         <Label Content="Descripcio:" Grid.Row="2" Grid.Column="0" Margin="17,0,27,5" ></Label>
         <TextBox Name="Descripcio" Grid.Row="2" Grid.Column="1" Text="{Binding Descripcio}" Margin="9,4,16,5"/>
 
-        <Label Content="Responsable"  Grid.Row="3"  Width="98" Margin="17,0,27,5"/>
-        <TextBlock Name="Responsable" Grid.Column="1"   Grid.Row="3" Text="{Binding Responsable}" Margin="9,4,16,5" />
+        <Label Content="Responsable:" Grid.Row="2" Grid.Column="0" Margin="17,27,27,8" Grid.RowSpan="2" ></Label>
+        <ComboBox Name="Responsable" Grid.Row="3" Grid.Column="1" Text="{Binding Responsable}" Margin="9,4,16,5"/>
 
-        <Label Content="Color" Grid.Row="4" Grid.Column="0" Margin="17,0,27,5"  />
-        <TextBlock Name="Color" Grid.Column="1"   Grid.Row="3" Text="{Binding Colors}" Margin="9,4,16,5" />
+        <Label Content="Color:" Grid.Row="3" Grid.Column="0" Margin="17,27,27,8" Grid.RowSpan="2" ></Label>
+        <TextBox Name="Color" Grid.Row="4" Text="{Binding Colors}" Margin="9,4,16,5" Grid.Column="1"/>
 
         <Label Content="Data Inici:" Grid.Row="5" Grid.Column="0" Margin="17,0,27,5"/>
-        <DatePicker Name="Data_Inici" Grid.Row="5" Grid.Column="1" SelectedDate ="{Binding Data_Inici}" SelectedDateFormat="Short" Margin="2,4,8,4"/>
+        <DatePicker Name="Data_Inici" Grid.Row="5" Grid.Column="1" SelectedDate ="{Binding Data_Inici}" SelectedDateFormat="Short" Margin="9,4,16,5"/>
 
         <Label Content="Data_Final" Grid.Row="6" Grid.Column="0" Margin="17,0,27,5"/>
-        <DatePicker Name="Data_Final" Grid.Column="1" Grid.Row="6"  SelectedDate ="{Binding Data_Final}"  SelectedDateFormat="Short" Margin="2,4,8,4"/>
+        <DatePicker Name="Data_Final" Grid.Column="1" Grid.Row="6"  SelectedDate ="{Binding Data_Final}"  SelectedDateFormat="Short" Margin="9,4,16,5"/>
 
-        <Button Name="btnUpdate2" Content="Desar" Grid.Row="7" Grid.Column="1" Margin="17,5,25,5" Click="btnUpdate_Click2"/>
+        <Button Name="btnUpdate2" Content="Desar" Grid.Row="8" Margin="123,0,115,104" Click="btnUpdate_Click2" Grid.ColumnSpan="2"/>
 
     </Grid>
-    
+
 </Window>

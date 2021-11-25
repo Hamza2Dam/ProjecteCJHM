@@ -5,35 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SQLiteExampleV2"
         mc:Ignorable="d"
-        Title="TO DO " Height="450" Width="800" ContentRendered="Window_ContentRendered">
+        Title="TO DO "  MinHeight="500"  MinWidth="800"  Loaded="Window_Loaded3" ContentRendered="Window_ContentRendered">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="23*"/>
-            <RowDefinition Height="14*"/>
-            <RowDefinition Height="14*"/>
-            <RowDefinition Height="166*"/>
-        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="11*"/>
-            <ColumnDefinition Width="218*"/>
-            <ColumnDefinition Width="36*"/>
-            <ColumnDefinition Width="251*"/>
-            <ColumnDefinition Width="32*"/>
-            <ColumnDefinition Width="242*"/>
-            <ColumnDefinition Width="10*"/>
-        </Grid.ColumnDefinitions> 
+            <ColumnDefinition Width="130*"/>
+            <ColumnDefinition Width="130*"/>
+            <ColumnDefinition Width="130*"/>
 
-        <Label x:Name="lbl_todo" Content="TO DO" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,16,0,0" VerticalAlignment="Top" Height="41" Width="95" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" />
-        <Label x:Name="lbl_doing" Content="DOING" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,16,0,0" VerticalAlignment="Top" Height="41" Width="95" Grid.Column="3" Grid.Row="1" Grid.RowSpan="3" />
-        <Label x:Name="lbl_done" Content="DONE" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,16,0,0" VerticalAlignment="Top" Height="41" Width="95" Grid.Column="5" Grid.Row="1" Grid.RowSpan="3" />
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="340*"/>
+        </Grid.RowDefinitions>
 
-        <StackPanel Orientation="Horizontal"  Background="Cyan"      Margin="0,1,0,0" Grid.ColumnSpan="7" />
-        <StackPanel Orientation="Vertical"    Background="#FFD7F900" Margin="0,1,0,10" Grid.Column="3" Grid.Row="3"/>
-        <StackPanel Orientation="Vertical"    Background="#FFA0EC7D" Margin="2,1,0,10" Grid.Column="5" Grid.Row="3"/>
-        <StackPanel Orientation="Vertical"    Background="#FFFB6851" Margin="10,1,2,10" Grid.ColumnSpan="2" Grid.Row="3"/>
 
-        <Button Name="AfegirResponsable_Button"  Content="Afegir Responsable" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="27" Width="116" Margin="128,11,0,0" Click="AfegirResponsable_Button_Click" Grid.ColumnSpan="2" Grid.Column="1" />
-        <Button Name="AfegirTasca_Button" Content="Afegir Tasca" HorizontalAlignment="Left" VerticalAlignment="Top" Height="27" Width="116" Margin="10,11,0,0"  Click="AfegirTasca_Button_Click" Grid.ColumnSpan="2"/>
+        <StackPanel Orientation="Vertical"    Background="#FFA0EC7D" Grid.Row="2" Grid.Column="2" />
+        <StackPanel Orientation="Vertical"    Background="#FFD7F900" Grid.Row="2" Grid.ColumnSpan="2"/>
+        <StackPanel Orientation="Vertical"    Background="#FFFB6851" Grid.ColumnSpan="1" Grid.Row="2"/>
+        <StackPanel Orientation="Horizontal"  Background="AntiqueWhite" Grid.ColumnSpan="4" Grid.Row="1" />
+
+
+        <ListBox x:Name="lbOne"   Drop="ListBox_Drop" AllowDrop="True" PreviewMouseLeftButtonDown="ListBox_PreviewMouseLeftButtonDown" HorizontalAlignment="Center" Margin="0,10,0,8" Width="246" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Row="2" />
+        <ListBox x:Name="lbTwo"   Drop="ListBox_Drop" AllowDrop="True" PreviewMouseLeftButtonDown="ListBox_PreviewMouseLeftButtonDown" HorizontalAlignment="Center" Margin="0,10,0,8" Width="246" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Row="2" Grid.Column="1"/>
+        <ListBox x:Name="lbThree" Drop="ListBox_Drop" AllowDrop="True" PreviewMouseLeftButtonDown="ListBox_PreviewMouseLeftButtonDown" HorizontalAlignment="Center" Margin="0,10,0,8" Width="246" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Row="2" Grid.Column="2"/>
+
+        <TextBlock Height="AUTO" Text="TO DO" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center"  VerticalAlignment="Top"  Grid.Row="1" Grid.Column="0" />
+        <TextBlock Height="AUTO" Text="DOING" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center"  VerticalAlignment="Top"  Grid.Column="1" Grid.Row="1" />
+        <TextBlock Height="AUTO" Text="DONE"  FontSize="25" FontWeight="Bold" HorizontalAlignment="Center"  VerticalAlignment="Top"  Grid.Column="2" Grid.Row="1" />
+
+        <Button Name="AfegirResponsable_Button"  Content="Afegir Responsable" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="27" Width="116" Margin="140,11,0,0" Click="AfegirResponsable_Button_Click" />
+        <Button Name="AfegirTasca_Button" Content="Afegir Tasca" HorizontalAlignment="Left" VerticalAlignment="Top" Height="27" Width="116" Margin="10,11,0,0"  Click="AfegirTasca_Button_Click"/>
+
 
 
 
