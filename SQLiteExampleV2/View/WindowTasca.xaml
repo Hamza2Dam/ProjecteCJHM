@@ -23,7 +23,16 @@
                 <DataGridTemplateColumn Header="AfegirTasca" Width="Auto" >
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="AfegirTasca" Click="AddTasca" />                        </DataTemplate>
+                            <Button Content="AfegirTasca" Click="AddTasca" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                
+                <DataGridTemplateColumn Header="EliminarTasca" Width="Auto" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="EliminarTasca" Click="DeleteTasca" />
+                        </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
