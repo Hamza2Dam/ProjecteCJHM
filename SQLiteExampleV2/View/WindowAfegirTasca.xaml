@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SQLiteExampleV2.View"
         mc:Ignorable="d"
-        Title="Modificar Responsable" Height="400" Width="350">
+        Title="Modificar Responsable" Height="400" Width="350" Loaded="Window_Loaded4">
     <Grid Margin="10,10,10,10">
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
@@ -33,7 +33,19 @@
         <TextBox Name="Descripcio" Grid.Row="2" Grid.Column="1" Text="{Binding Descripcio}" Margin="9,4,16,5"/>
 
         <Label Content="Responsable:" Grid.Row="2" Grid.Column="0" Margin="17,27,27,8" Grid.RowSpan="2" ></Label>
-        <ComboBox Name="Responsable" Grid.Row="3" Grid.Column="1" Text="{Binding Responsable}" Margin="9,4,16,5"/>
+        <ComboBox Name="Responsable" Grid.Row="3" Grid.Column="1"  Margin="9,4,16,5" >
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+
+                        <TextBox  Text="{Binding Name}" IsEnabled="False"></TextBox>
+                       
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+
+
+        </ComboBox>
 
         <Label Content="Color:" Grid.Row="3" Grid.Column="0" Margin="17,27,27,8" Grid.RowSpan="2" ></Label>
         <TextBox Name="Color" Grid.Row="4" Text="{Binding Colors}" Margin="9,4,16,5" Grid.Column="1"/>
