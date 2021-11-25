@@ -31,8 +31,7 @@
         </StackPanel>
 
         <ListBox Name="lbOne"   
-                 Drop="ListBox_Drop" AllowDrop="True" 
-                 PreviewMouseLeftButtonDown="ListBox_PreviewMouseLeftButtonDown" HorizontalAlignment="Center" 
+                  HorizontalAlignment="Center" 
                  Margin="0,10,0,8" Width="246" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Row="2">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
@@ -43,8 +42,29 @@
                 </ListBox.ItemTemplate>
         </ListBox>
 
-        <ListBox x:Name="lbTwo"   Drop="ListBox_Drop" AllowDrop="True" PreviewMouseLeftButtonDown="ListBox_PreviewMouseLeftButtonDown" HorizontalAlignment="Center" Margin="0,10,0,8" Width="246" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Row="2" Grid.Column="1"/>
-        <ListBox x:Name="lbThree" Drop="ListBox_Drop" AllowDrop="True" PreviewMouseLeftButtonDown="ListBox_PreviewMouseLeftButtonDown" HorizontalAlignment="Center" Margin="0,10,0,8" Width="246" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Row="2" Grid.Column="2"/>
+        <ListBox x:Name="lbTwo"   
+                  
+                 HorizontalAlignment="Center" Margin="0,10,0,8" Width="246" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Row="2" Grid.Column="1">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock  Text="{Binding Nom}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <ListBox x:Name="lbThree"
+                 
+                 HorizontalAlignment="Center" Margin="0,10,0,8" Width="246" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Row="2" Grid.Column="2">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock  Text="{Binding Nom}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
 
         <TextBlock Height="AUTO" Text="TO DO" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center"  VerticalAlignment="Top"  Grid.Row="1" Grid.Column="0" />
         <TextBlock Height="AUTO" Text="DOING" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center"  VerticalAlignment="Top"  Grid.Column="1" Grid.Row="1" />

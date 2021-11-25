@@ -19,6 +19,7 @@ using SQLiteExampleV2.Service;
 
 using SQLiteExampleV2.Persistence;
 using SQLiteExampleV2.View;
+using SQLiteExampleV2.Entity;
 
 namespace SQLiteExampleV2
 {
@@ -27,13 +28,6 @@ namespace SQLiteExampleV2
     /// </summary>
     public partial class MainWindow : Window
     {
-        ListBox dragSource = null;
-
-        //Els ObservableCollection s'utiltizen per notificar a l'enllaç quan s'ha afegit, eliminat o modificat un element
-        //D'aquesta manera tant si 
-
-        ObservableCollection<string> zoneList_2 = new ObservableCollection<string>();
-        ObservableCollection<string> zoneList_3 = new ObservableCollection<string>();
 
         public MainWindow()
         {
@@ -63,69 +57,18 @@ namespace SQLiteExampleV2
         {
 
             lbOne.ItemsSource = TascaService.GetTODO();
-
             lbTwo.ItemsSource = TascaService.GetDOING();
             lbThree.ItemsSource = TascaService.GetDONE();
 
-
-        }
-
-        private void ListBox_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            //Obtenim la llista des d'on s'ha polsat 
-            ListBox parent = (ListBox)sender;
-            dragSource = parent;
-            //Obtenim l'element seleccionat
-            object data = GetDataFromListBox(dragSource, e.GetPosition(parent));
-
-            if (data != null)
-            {
-                DragDrop.DoDragDrop(parent, data, DragDropEffects.Move);
-            }
-        }
-
-        private static object GetDataFromListBox(ListBox source, Point point)
-        {
-            UIElement element = source.InputHitTest(point) as UIElement;
-            if (element != null)
-            {
-                object data = DependencyProperty.UnsetValue;
-                while (data == DependencyProperty.UnsetValue)
-                {
-                    data = source.ItemContainerGenerator.ItemFromContainer(element);
-
-                    if (data == DependencyProperty.UnsetValue)
-                    {
-                        element = VisualTreeHelper.GetParent(element) as UIElement;
-                    }
-
-                    if (element == source)
-                    {
-                        return null;
-                    }
-                }
-
-                if (data != DependencyProperty.UnsetValue)
-                {
-                    return data;
-                }
-            }
-
-            return null;
-        }
-
-        private void ListBox_Drop(object sender, DragEventArgs e)
-        {
-            ListBox parent = (ListBox)sender;
-            object data = e.Data.GetData(typeof(string));
-            ((IList)dragSource.ItemsSource).Remove(data);
-            ((IList)parent.ItemsSource).Add(data);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            lbTwo.Items.Add(lbOne.Items[lbOne.SelectedIndex]);
-            lbOne.Items.RemoveAt(lbOne.SelectedIndex);
+            Tasca Moure = (Tasca)lbOne.Items[lbOne.SelectedIndex];
+            Moure.Estat = "DOING";
+            lbOne.ItemsSource = TascaService.GetTODO();
+            lbTwo.ItemsSource = TascaService.GetDOING();
+            lbThree.ItemsSource = TascaService.GetDONE();
 
         }
     }
