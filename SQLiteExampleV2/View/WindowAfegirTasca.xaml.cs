@@ -29,18 +29,11 @@ namespace SQLiteExampleV2.View
             InitializeComponent();
         }
 
-        /// <summary>
-        /// Creo un altre constructor on li passo l'objecte user del formulari  (es podria fer d'altres maneres
-        /// com per exemple accedir a través d'una property
-        /// </summary>
-        /// <param name="user"></param>
         public WindowAfegirTasca(Tasca tasca)
         {
             InitializeComponent();
 
             oTasca = tasca;
-
-            //Li estem dient amb que farà l'enllaç (quan fem el binding en el disseny) 
             this.DataContext = tasca;
         }
 

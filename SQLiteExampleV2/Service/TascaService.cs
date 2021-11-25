@@ -78,7 +78,7 @@ namespace SQLiteExampleV2.Service
             int rows_afected = 0;
             using (var ctx = DbContext.GetInstance())
             {
-                string query = "UPDATE Tasca SET Nom = ?, Descripcio = ?, Responsable = ?, Colors = ?,  Data_Inici = ?, Data_Final = ? WHERE Id = ?";
+                string query = "UPDATE Tasca SET Nom = ?, Descripcio = ?, Responsable = ?, Colors = ?,  Data_Inici = ?, Data_Final = ? WHERE Codi = ?";
                 using (var command = new SQLiteCommand(query, ctx))
                 {
                     command.Parameters.Add(new SQLiteParameter("Nom", tasca.Nom));
@@ -87,6 +87,7 @@ namespace SQLiteExampleV2.Service
                     command.Parameters.Add(new SQLiteParameter("Colors", tasca.Colors));
                     command.Parameters.Add(new SQLiteParameter("Data_Inici", tasca.Data_Inici));
                     command.Parameters.Add(new SQLiteParameter("Data_Final", tasca.Data_Final));
+                    command.Parameters.Add(new SQLiteParameter("Codi", tasca.Codi));
 
                     rows_afected = command.ExecuteNonQuery();
                 }
