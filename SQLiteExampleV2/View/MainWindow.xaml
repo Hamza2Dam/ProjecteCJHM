@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:SQLiteExampleV2"
         mc:Ignorable="d"
         Title="TO DO "  MinHeight="500"  MinWidth="800"  Loaded="Window_Loaded3" ContentRendered="Window_ContentRendered">
+    
     <Grid>
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="130*"/>
             <ColumnDefinition Width="130*"/>
@@ -24,10 +26,21 @@
         <StackPanel Orientation="Vertical"    Background="#FFA0EC7D" Grid.Row="2" Grid.Column="2" />
         <StackPanel Orientation="Vertical"    Background="#FFD7F900" Grid.Row="2" Grid.ColumnSpan="2"/>
         <StackPanel Orientation="Vertical"    Background="#FFFB6851" Grid.ColumnSpan="1" Grid.Row="2"/>
-        <StackPanel Orientation="Horizontal"  Background="AntiqueWhite" Grid.ColumnSpan="4" Grid.Row="1" />
+        <StackPanel Orientation="Horizontal"  Background="AntiqueWhite" Grid.ColumnSpan="4" Grid.Row="1"/>
 
+        <ListBox Name="lbOne"   
+                 Drop="ListBox_Drop" AllowDrop="True" 
+                 PreviewMouseLeftButtonDown="ListBox_PreviewMouseLeftButtonDown" HorizontalAlignment="Center" 
+                 Margin="0,10,0,8" Width="246" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Row="2">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock  Text="{Binding Nom}"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+        </ListBox>
 
-        <ListBox x:Name="lbOne"   Drop="ListBox_Drop" AllowDrop="True" PreviewMouseLeftButtonDown="ListBox_PreviewMouseLeftButtonDown" HorizontalAlignment="Center" Margin="0,10,0,8" Width="246" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Row="2" />
         <ListBox x:Name="lbTwo"   Drop="ListBox_Drop" AllowDrop="True" PreviewMouseLeftButtonDown="ListBox_PreviewMouseLeftButtonDown" HorizontalAlignment="Center" Margin="0,10,0,8" Width="246" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Row="2" Grid.Column="1"/>
         <ListBox x:Name="lbThree" Drop="ListBox_Drop" AllowDrop="True" PreviewMouseLeftButtonDown="ListBox_PreviewMouseLeftButtonDown" HorizontalAlignment="Center" Margin="0,10,0,8" Width="246" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Row="2" Grid.Column="2"/>
 

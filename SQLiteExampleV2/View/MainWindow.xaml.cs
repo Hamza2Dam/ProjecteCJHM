@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using SQLiteExampleV2.Service;
 
 
 using SQLiteExampleV2.Persistence;
@@ -60,15 +61,20 @@ namespace SQLiteExampleV2
 
         private void Window_Loaded3(object sender, RoutedEventArgs e)
         {
-            //Omplim la primera llista
+            /*Omplim la primera llista
             foreach (TimeZoneInfo tzi in TimeZoneInfo.GetSystemTimeZones())
             {
                 zoneList_1.Add(tzi.ToString());
             }
+            */
+            lbOne.ItemsSource = TascaService.GetAll();
+            lbTwo.ItemsSource = zoneList_2;
 
-            lbOne.ItemsSource = zoneList_1;  //com que ho hem enllaçat amb un Observable collection els canvis aplicats tant a l'element visual com al no visual es veuran reflectits
-            lbTwo.ItemsSource = zoneList_2; //com que ho hem enllaçat amb un Observable collection els canvis aplicats tant a l'element visual com al no visual es veuran reflectits
-            lbThree.ItemsSource = zoneList_3; //com que ho hem enllaçat amb un Observable collection els canvis aplicats tant a l'element visual com al no visual es veuran reflectits
+            /*lbOne.ItemsSource = zoneList_1;
+          
+           lbThree.ItemsSource = zoneList_3;
+           */
+
 
         }
 
