@@ -59,6 +59,12 @@
         <DatePicker Name="Data_Final" Grid.Column="1" Grid.Row="6"  SelectedDate ="{Binding Data_Final}"  SelectedDateFormat="Short" Margin="9,4,16,5" Grid.ColumnSpan="2"/>
 
         <Button Name="btnUpdate2" Content="Desar" Grid.Row="8" Margin="123,0,0,0" Click="btnUpdate_Click2" Grid.ColumnSpan="2"/>
+        <Label Content="Data_Final" Grid.Row="6" Grid.Column="0" Margin="17,0,27,5"/>
+        <DatePicker x:Name="Data_Final_Copy" Grid.Column="1" Grid.Row="6"  SelectedDate ="{Binding Data_Final}"  SelectedDateFormat="Short" Margin="9,4,16,5" Grid.ColumnSpan="2"/>
+        <Label Content="Data_Final" Grid.Row="6" Grid.Column="0" Margin="17,0,27,5"/>
+        <DatePicker x:Name="Data_Final_Copy1" Grid.Column="1" Grid.Row="6"  SelectedDate ="{Binding Data_Final}"  SelectedDateFormat="Short" Margin="9,4,16,5" Grid.ColumnSpan="2"/>
+        <Label Content="Estat" Grid.Row="7" Grid.Column="0" Margin="17,4,27,8" />
+        <TextBox x:Name="Estat" Grid.Row="7" Text="{Binding Estat}" Margin="9,11,16,5" Grid.Column="1" Grid.ColumnSpan="2"/>
 
     </Grid>
 

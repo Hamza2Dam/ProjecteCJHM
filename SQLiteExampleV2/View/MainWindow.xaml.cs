@@ -31,7 +31,7 @@ namespace SQLiteExampleV2
 
         //Els ObservableCollection s'utiltizen per notificar a l'enllaç quan s'ha afegit, eliminat o modificat un element
         //D'aquesta manera tant si 
-        ObservableCollection<string> zoneList_1 = new ObservableCollection<string>();
+
         ObservableCollection<string> zoneList_2 = new ObservableCollection<string>();
         ObservableCollection<string> zoneList_3 = new ObservableCollection<string>();
 
@@ -61,19 +61,11 @@ namespace SQLiteExampleV2
 
         private void Window_Loaded3(object sender, RoutedEventArgs e)
         {
-            /*Omplim la primera llista
-            foreach (TimeZoneInfo tzi in TimeZoneInfo.GetSystemTimeZones())
-            {
-                zoneList_1.Add(tzi.ToString());
-            }
-            */
-            lbOne.ItemsSource = TascaService.GetAll();
-            lbTwo.ItemsSource = zoneList_2;
 
-            /*lbOne.ItemsSource = zoneList_1;
-          
-           lbThree.ItemsSource = zoneList_3;
-           */
+            lbOne.ItemsSource = TascaService.GetTODO();
+
+            lbTwo.ItemsSource = TascaService.GetDOING();
+            lbThree.ItemsSource = TascaService.GetDONE();
 
 
         }
@@ -130,6 +122,11 @@ namespace SQLiteExampleV2
             ((IList)parent.ItemsSource).Add(data);
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            lbTwo.Items.Add(lbOne.Items[lbOne.SelectedIndex]);
+            lbOne.Items.RemoveAt(lbOne.SelectedIndex);
 
+        }
     }
 }

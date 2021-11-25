@@ -61,9 +61,10 @@ namespace SQLiteExampleV2.View
                     //Eliminen usuari
                     UserService oService = new UserService();
                     oService.Delete(oUser.Id);
-
                     //Actualitzem dades del grid
                     dgUsers.ItemsSource = UserService.GetAll();
+
+                    //dgUsers.Items.Add(new User());
                 }
                 catch (Exception ex)
                 {

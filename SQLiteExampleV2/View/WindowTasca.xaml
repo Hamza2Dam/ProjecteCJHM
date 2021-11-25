@@ -19,6 +19,7 @@
                 <DataGridTextColumn Header="Colors" IsReadOnly="True" Binding="{Binding Colors}" Width="50"/>
                 <DataGridTextColumn Header="Data Final" IsReadOnly="True" Binding="{Binding Data_Final}" Width="Auto"/>
                 <DataGridTextColumn Header="Data Inici" IsReadOnly="True" Binding="{Binding Data_Inici}" Width="Auto"/>
+                <DataGridTextColumn Header="Colors" IsReadOnly="True" Binding="{Binding Estat}" Width="50"/>
 
                 <DataGridTemplateColumn Header="AfegirTasca" Width="Auto" >
                     <DataGridTemplateColumn.CellTemplate>

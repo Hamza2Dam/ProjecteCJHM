@@ -58,7 +58,7 @@ namespace SQLiteExampleV2.Persistence
 
                     for (var i = 1; i <= 10; i++)
                     {
-                        var query = "INSERT INTO Tasca (Nom, Descripcio, Responsable, Colors, Data_Inici, Data_Final) VALUES (?, ?, ?, ?, ?, ?)";
+                        var query = "INSERT INTO Tasca (Nom, Descripcio, Responsable, Colors, Data_Inici, Data_Final, Estat) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
                         using (var command = new SQLiteCommand(query, ctx))
                         {
@@ -71,6 +71,7 @@ namespace SQLiteExampleV2.Persistence
                             var rnd = new Random();
                             command.Parameters.Add(new SQLiteParameter("Data_Inici", DateTime.Today.AddYears(-rnd.Next(1, 50))));
                             command.Parameters.Add(new SQLiteParameter("Data_Final", DateTime.Today.AddYears(-rnd.Next(1, 50))));
+                            command.Parameters.Add(new SQLiteParameter("Estat", "TODO"));
 
                             command.ExecuteNonQuery();
                         }

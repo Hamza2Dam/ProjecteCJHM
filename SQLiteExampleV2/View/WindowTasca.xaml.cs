@@ -28,7 +28,8 @@ namespace SQLiteExampleV2.View
 
         private void Window_Loaded2(object sender, RoutedEventArgs e)
         {
-            dgTasca.ItemsSource = TascaService.GetAll();
+            dgTasca.ItemsSource = TascaService.GetTODO();
+
         }
 
         private void AddTasca(object sender, RoutedEventArgs e)
@@ -55,7 +56,7 @@ namespace SQLiteExampleV2.View
                     oService.Delete(oTasca.Codi);
 
                     //Actualitzem dades del grid
-                    dgTasca.ItemsSource = TascaService.GetAll();
+                    dgTasca.ItemsSource = TascaService.GetTODO();
                 }
                 catch (Exception ex)
                 {

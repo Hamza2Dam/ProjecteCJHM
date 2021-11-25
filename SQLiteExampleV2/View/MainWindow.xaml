@@ -26,7 +26,9 @@
         <StackPanel Orientation="Vertical"    Background="#FFA0EC7D" Grid.Row="2" Grid.Column="2" />
         <StackPanel Orientation="Vertical"    Background="#FFD7F900" Grid.Row="2" Grid.ColumnSpan="2"/>
         <StackPanel Orientation="Vertical"    Background="#FFFB6851" Grid.ColumnSpan="1" Grid.Row="2"/>
-        <StackPanel Orientation="Horizontal"  Background="DimGray" Grid.ColumnSpan="4" Grid.Row="1"/>
+        <StackPanel Orientation="Horizontal"  Background="DimGray" Grid.ColumnSpan="4" Grid.Row="1">
+            <Button Content="&gt;" Click="Button_Click"/>
+        </StackPanel>
 
         <ListBox Name="lbOne"   
                  Drop="ListBox_Drop" AllowDrop="True" 
