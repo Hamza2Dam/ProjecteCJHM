@@ -110,6 +110,39 @@ namespace SQLiteExampleV2.Service
             }
             return result;
         }
+
+        public static List<Tasca> GetALL()
+        {
+            var result = new List<Tasca>();
+
+            using (var ctx = DbContext.GetInstance())
+            {
+                var query = "SELECT * FROM Tasca";
+
+                using (var command = new SQLiteCommand(query, ctx))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            result.Add(new Tasca
+                            {
+                                Codi = Convert.ToInt32(reader["Codi"].ToString()),
+                                Nom = reader["Nom"].ToString(),
+                                Descripcio = reader["Descripcio"].ToString(),
+                                Responsable = reader["Responsable"].ToString(),
+                                Colors = reader["Colors"].ToString(),
+                                Data_Inici = Convert.ToDateTime(reader["Data_Inici"]),
+                                Data_Final = Convert.ToDateTime(reader["Data_Final"]),
+                                Estat = reader["Estat"].ToString(),
+
+                            });
+                        }
+                    }
+                }
+            }
+            return result;
+        }
         /// <summary>
         /// Afegeix un nou usuari a la base de dades
         /// </summary>
