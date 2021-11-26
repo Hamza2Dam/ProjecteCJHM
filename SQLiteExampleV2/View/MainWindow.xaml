@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SQLiteExampleV2"
         mc:Ignorable="d"
-        Title="TO DO "  MinHeight="500"  MinWidth="800"  Loaded="Window_Loaded3" ContentRendered="Window_ContentRendered">
-    
-    <Grid>
-        
+        Title="TO DO "  MinHeight="500"  MinWidth="800"  Loaded="Window_Loaded_MAIN" ContentRendered="Window_ContentRendered">
+
+    <Grid Background="#FF9A9ADE">
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="130*"/>
             <ColumnDefinition Width="130*"/>
@@ -22,29 +22,26 @@
             <RowDefinition Height="340*"/>
         </Grid.RowDefinitions>
 
-
-        <StackPanel Orientation="Vertical"    Background="#FFA0EC7D" Grid.Row="2" Grid.Column="2" />
-        <StackPanel Orientation="Vertical"    Background="#FFD7F900" Grid.Row="2" Grid.ColumnSpan="2"/>
-        <StackPanel Orientation="Vertical"    Background="#FFFB6851" Grid.ColumnSpan="1" Grid.Row="2"/>
-        <StackPanel Orientation="Horizontal"  Background="DimGray" Grid.ColumnSpan="4" Grid.Row="1">
-            <Button Content="&gt;" Click="Button_Click"/>
-        </StackPanel>
+        <Button Content="&lt;" Click="Button_DOING_TODO" Margin="237,0,266,0" Grid.ColumnSpan="2" Grid.Row="1"/>
+        <Button Content="&gt;" Click="Button_TODO_DOING" Margin="0,0,237,0" Grid.Row="1" Grid.Column="1"/>
+        <Button Content="&lt;" Click="Button_DONE_DOING" Margin="213,0,5,0" Grid.Column="1" Grid.Row="1"/>
+        <Button Content="&gt;" Click="Button_DOING_DONE" Margin="0,0,209,0" Grid.Column="2" Grid.Row="1"/>
 
         <ListBox Name="lbOne"   
-                  HorizontalAlignment="Center" 
-                 Margin="0,10,0,8" Width="246" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Row="2">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel>
-                            <TextBlock  Text="{Binding Nom}"></TextBlock>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
+                 HorizontalAlignment="Center" Margin="0,10,0,8" Width="246" 
+                 ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Row="2" Background="#FFEE7878">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock  Text="{Binding Nom}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
 
-        <ListBox x:Name="lbTwo"   
-                  
-                 HorizontalAlignment="Center" Margin="0,10,0,8" Width="246" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Row="2" Grid.Column="1">
+        <ListBox x:Name="lbTwo" 
+                 HorizontalAlignment="Center" Margin="0,10,0,8" Width="246" 
+                 ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Row="2" Grid.Column="1" Background="#FFF1FF99">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -55,8 +52,8 @@
         </ListBox>
 
         <ListBox x:Name="lbThree"
-                 
-                 HorizontalAlignment="Center" Margin="0,10,0,8" Width="246" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Row="2" Grid.Column="2">
+                 HorizontalAlignment="Center" Margin="0,10,0,8" Width="246" 
+                 ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Row="2" Grid.Column="2" Background="#FF85EAA5">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -70,8 +67,8 @@
         <TextBlock Height="AUTO" Text="DOING" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center"  VerticalAlignment="Top"  Grid.Column="1" Grid.Row="1" />
         <TextBlock Height="AUTO" Text="DONE"  FontSize="25" FontWeight="Bold" HorizontalAlignment="Center"  VerticalAlignment="Top"  Grid.Column="2" Grid.Row="1" />
 
-        <Button Name="AfegirResponsable_Button"  Content="Afegir Responsable" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="27" Width="116" Margin="140,11,0,0" Click="AfegirResponsable_Button_Click" />
-        <Button Name="AfegirTasca_Button" Content="Afegir Tasca" HorizontalAlignment="Left" VerticalAlignment="Top" Height="27" Width="116" Margin="10,11,0,0"  Click="AfegirTasca_Button_Click"/>
+        <Button Name="AfegirResponsable_Button"  Content="Afegir Responsable" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="27" Width="116" Margin="140,11,0,0" Click="AfegirResponsable_Button_Click" Background="#FF25E4EE" />
+        <Button Name="AfegirTasca_Button" Content="Afegir Tasca" HorizontalAlignment="Left" VerticalAlignment="Top" Height="27" Width="116" Margin="10,11,0,0"  Click="AfegirTasca_Button_Click" Background="#FF29E3EC"/>
 
 
 

@@ -39,6 +39,7 @@ namespace SQLiteExampleV2.Persistence
                         }
                     }
 
+                    // Insert a Users
                     for (var i = 1; i <= 15; i++)
                     {
                         var query = "INSERT INTO Users (name, lastname, birthday) VALUES (?, ?, ?)";
@@ -56,6 +57,7 @@ namespace SQLiteExampleV2.Persistence
                         }
                     }
 
+                    // Insert a Tasca
                     for (var i = 1; i <= 10; i++)
                     {
                         var query = "INSERT INTO Tasca (Nom, Descripcio, Responsable, Colors, Data_Inici, Data_Final, Estat) VALUES (?, ?, ?, ?, ?, ?, ?)";
@@ -81,14 +83,7 @@ namespace SQLiteExampleV2.Persistence
         }
 
 
-
-
-
-
-
-
-
-
+        // SQLiteConnection
         public static SQLiteConnection GetInstance()
         {
             var db = new SQLiteConnection(

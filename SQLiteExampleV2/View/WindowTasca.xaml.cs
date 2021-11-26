@@ -26,12 +26,14 @@ namespace SQLiteExampleV2.View
             InitializeComponent();
         }
 
-        private void Window_Loaded2(object sender, RoutedEventArgs e)
+        // Window_Loaded_Tasca
+        public void Window_Loaded2(object sender, RoutedEventArgs e)
         {
-            dgTasca.ItemsSource = TascaService.GetTODO();
+            dgTasca.ItemsSource = TascaService.GetALL();
 
         }
 
+        // AddTasca
         private void AddTasca(object sender, RoutedEventArgs e)
         {
             //Agafem les dades del item seleccionat
@@ -39,9 +41,19 @@ namespace SQLiteExampleV2.View
             //Li passem l'usuari seleccionat al formulari Edit
             WindowAfegirTasca w = new WindowAfegirTasca(oTasca);
             w.ShowDialog();
+            dgTasca.ItemsSource = TascaService.GetALL();
+
         }
 
+        // EditTasca
+        private void EditTasca(object sender, RoutedEventArgs e)
+        {
+            Tasca oTasca = (Tasca)dgTasca.SelectedItem;
+            WindowEditTasca w = new WindowEditTasca(oTasca);
+            w.ShowDialog();
+        }
 
+        // DeleteTasca
         private void DeleteTasca(object sender, RoutedEventArgs e)
         {
             if (MessageBox.Show("¿Eliminar Tasca  seleccionado?", "Eliminar", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
@@ -56,7 +68,7 @@ namespace SQLiteExampleV2.View
                     oService.Delete(oTasca.Codi);
 
                     //Actualitzem dades del grid
-                    dgTasca.ItemsSource = TascaService.GetTODO();
+                    dgTasca.ItemsSource = TascaService.GetALL();
                 }
                 catch (Exception ex)
                 {

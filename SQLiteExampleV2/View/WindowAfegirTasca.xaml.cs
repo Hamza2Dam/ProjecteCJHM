@@ -37,13 +37,21 @@ namespace SQLiteExampleV2.View
             this.DataContext = tasca;
         }
 
-        private void btnUpdate_Click2(object sender, RoutedEventArgs e)
+        // Afegir Tasca
+        private void Afegir_Tascas(object sender, RoutedEventArgs e)
         {
-            try
-            {
+            try { 
+            
                 TascaService tascaService = new TascaService();
                 Tasca t = new Tasca();
-                t.Colors = Color.Text;
+                
+                t.Nom = Nom.Text;
+                t.Descripcio = Descripcio.Text;
+                t.Responsable = Responsable.Text;
+                t.Colors = Colors.Text;
+                t.Data_Inici =(DateTime)Data_Inici.SelectedDate;
+                t.Data_Final = (DateTime)Data_Final.SelectedDate;
+                t.Estat = Estat.Text;
                 
                 tascaService.Add(t);
                 this.Close();
@@ -54,12 +62,6 @@ namespace SQLiteExampleV2.View
             }
         }
 
-
-        private void Window_Loaded4(object sender, RoutedEventArgs e)
-        {
-            //Enllacem el control visual amb les dades
-            Responsable.ItemsSource = UserService.GetAll();
-        }
 
 
     }

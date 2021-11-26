@@ -19,31 +19,36 @@ namespace SQLiteExampleV2.View
     /// <summary>
     /// Interaction logic for WindowEditUser.xaml
     /// </summary>
-    public partial class WindowModificarResponsables : Window
+    public partial class WindowAfegirResponsables : Window
     {
 
         User oUser;
 
-        public WindowModificarResponsables()
+        public WindowAfegirResponsables()
         {
             InitializeComponent();
         }
 
-        public WindowModificarResponsables(User user)
+        public WindowAfegirResponsables(User user)
         {
-            InitializeComponent();           
-            oUser = user;   
+            InitializeComponent();
+            oUser = user;
             this.DataContext = user;
         }
 
 
-        // Modificar Reponsable
-        private void ModificarReponsable_Click(object sender, RoutedEventArgs e)
+        // Afegir Reponsable
+        private void AfegirReponsable_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 UserService userService = new UserService();
-                userService.Update(oUser);
+                User r = new User();
+                r.Name = Name.Text;
+                r.LastName = LastName.Text;
+                r.Birthday = (DateTime)Birthday.SelectedDate; ;
+
+                userService.Add(r);
                 this.Close();
             }
             catch (Exception ex)

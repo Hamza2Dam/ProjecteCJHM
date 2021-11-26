@@ -9,11 +9,8 @@ namespace SQLiteExampleV2.Service
 {
     public class UserService
     {
-       
-        /// <summary>
-        /// Obté tots els usuaris
-        /// </summary>
-        /// <returns></returns>
+
+        // GetALL
         public static List<User> GetAll()
         {
             var result = new List<User>();
@@ -42,11 +39,8 @@ namespace SQLiteExampleV2.Service
             return result;
         }
 
-        /// <summary>
-        /// Afegeix un nou usuari a la base de dades
-        /// </summary>
-        /// <param name="user">Entitat usuari</param>
-        /// <returns>El número d'usuaris afegits</returns>
+
+        // Add Responsable
         public int Add(User user)
         {
             int rows_afected = 0;
@@ -66,11 +60,7 @@ namespace SQLiteExampleV2.Service
             return rows_afected;
         }
 
-        /// <summary>
-        /// Actualitza un usuari
-        /// </summary>
-        /// <param name="user">Entitat usuari que es vol modificar</param>
-        /// <returns>El número de usuaris modificats</returns>
+        // Update Responsable
         public int Update(User user)
         {
             int rows_afected = 0;
@@ -91,11 +81,7 @@ namespace SQLiteExampleV2.Service
             return rows_afected;
         }
 
-        /// <summary>
-        /// Elimina un usuari
-        /// </summary>
-        /// <param name="Id">Codi d'usuari que es vol eliminar</param>
-        /// <returns>El número d'usuaris eliminats></returns>
+        // Delete Responsable
         public int Delete(int Id)
         {
             int rows_afected = 0;

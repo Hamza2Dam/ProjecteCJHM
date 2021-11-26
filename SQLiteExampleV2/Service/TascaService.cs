@@ -10,10 +10,7 @@ namespace SQLiteExampleV2.Service
     public class TascaService
     {
 
-        /// <summary>
-        /// Obté tots els usuaris
-        /// </summary>
-        /// <returns></returns>
+        // GetTODO
         public static List<Tasca> GetTODO()
         {
             var result = new List<Tasca>();
@@ -46,6 +43,8 @@ namespace SQLiteExampleV2.Service
             }
             return result;
         }
+
+        // GetDOING
         public static List<Tasca> GetDOING()
         {
             var result = new List<Tasca>();
@@ -78,6 +77,8 @@ namespace SQLiteExampleV2.Service
             }
             return result;
         }
+
+        // GetDONE
         public static List<Tasca> GetDONE()
         {
             var result = new List<Tasca>();
@@ -111,6 +112,10 @@ namespace SQLiteExampleV2.Service
             return result;
         }
 
+<<<<<<< HEAD
+        // GetALL
+=======
+>>>>>>> 20638bb3ab785ac88168c5e9419b6bea1fcf5300
         public static List<Tasca> GetALL()
         {
             var result = new List<Tasca>();
@@ -143,11 +148,17 @@ namespace SQLiteExampleV2.Service
             }
             return result;
         }
+<<<<<<< HEAD
+
+
+        // Add TASCA
+=======
         /// <summary>
         /// Afegeix un nou usuari a la base de dades
         /// </summary>
         /// <param nom="tasca">Entitat usuari</param>
         /// <returns>El número d'usuaris afegits</returns>
+>>>>>>> 20638bb3ab785ac88168c5e9419b6bea1fcf5300
         public int Add(Tasca tasca)
         {
             int rows_afected = 0;
@@ -171,6 +182,7 @@ namespace SQLiteExampleV2.Service
             return rows_afected;
         }
 
+        // Update TASCA
         public int Update(Tasca tasca)
         {
             int rows_afected = 0;
@@ -195,6 +207,7 @@ namespace SQLiteExampleV2.Service
             return rows_afected;
         }
 
+        // Delete TASCA
         public int Delete(int Codi)
         {
             int rows_afected = 0;

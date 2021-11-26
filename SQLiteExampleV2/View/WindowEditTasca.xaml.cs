@@ -19,37 +19,42 @@ namespace SQLiteExampleV2.View
     /// <summary>
     /// Interaction logic for WindowEditUser.xaml
     /// </summary>
-    public partial class WindowModificarResponsables : Window
+    public partial class WindowEditTasca : Window
     {
 
-        User oUser;
+        Tasca oTasca;
 
-        public WindowModificarResponsables()
+        public WindowEditTasca()
         {
             InitializeComponent();
         }
 
-        public WindowModificarResponsables(User user)
+        public WindowEditTasca(Tasca tasca)
         {
-            InitializeComponent();           
-            oUser = user;   
-            this.DataContext = user;
+            InitializeComponent();
+
+            oTasca = tasca;
+            this.DataContext = tasca;
         }
 
-
-        // Modificar Reponsable
-        private void ModificarReponsable_Click(object sender, RoutedEventArgs e)
+        // Edit Tasca
+        private void Edit_Tasca(object sender, RoutedEventArgs e)
         {
             try
             {
-                UserService userService = new UserService();
-                userService.Update(oUser);
+                TascaService tascaService = new TascaService();
+                tascaService.Update(oTasca);
                 this.Close();
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
+
+
+
+
     }
 }

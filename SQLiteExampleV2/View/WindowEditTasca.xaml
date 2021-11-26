@@ -1,12 +1,12 @@
-﻿<Window x:Class="SQLiteExampleV2.View.WindowAfegirTasca"
+﻿<Window x:Class="SQLiteExampleV2.View.WindowEditTasca"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SQLiteExampleV2.View"
         mc:Ignorable="d"
-        Title="Afegir Tascas" Height="400" Width="350" >
-    <Grid Margin="10,10,10,10" Background="#FF9ABEDE">
+        Title="Edit Tascas" Height="400" Width="350">
+    <Grid Margin="10,10,10,10" Background="#FF9ABEDE" >
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
@@ -40,28 +40,27 @@
                 <DataTemplate>
                     <StackPanel>
 
-                        <TextBox  Text="{Binding Responsable}" IsEnabled="False"></TextBox>
+                        <TextBox  Text="{Binding Name}" IsEnabled="False"></TextBox>
 
                     </StackPanel>
                 </DataTemplate>
             </ComboBox.ItemTemplate>
-
-
         </ComboBox>
 
-        <Label Content="Colors:" Grid.Row="3" Grid.Column="0" Margin="17,27,27,8" Grid.RowSpan="2" ></Label>
-        <TextBox Name="Colors" Grid.Row="4" Text="{Binding Colors}" Margin="9,4,16,5" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Label Content="Color:" Grid.Row="3" Grid.Column="0" Margin="17,27,27,8" Grid.RowSpan="2" ></Label>
+        <TextBox Name="Color" Grid.Row="4" Text="{Binding Colors}" Margin="9,4,16,5" Grid.Column="1" Grid.ColumnSpan="2"/>
 
         <Label Content="Data Inici:" Grid.Row="5" Grid.Column="0" Margin="17,0,27,5"/>
-        <DatePicker Name="Data_Inici" Grid.Row="5" Grid.Column="1" SelectedDate ="{Binding Data_Inici}" SelectedDateFormat="Short" Margin="9,4,16,5" Grid.ColumnSpan="2"/>
+        <DatePicker Name="Data_Inici" Grid.Row="5" Grid.Column="1" SelectedDate ="{Binding Data_Inici}" SelectedDateFormat="Short" Margin="9,2,16,2" Grid.ColumnSpan="2"/>
 
         <Label Content="Data_Final" Grid.Row="6" Grid.Column="0" Margin="17,0,27,5"/>
         <DatePicker Name="Data_Final" Grid.Column="1" Grid.Row="6"  SelectedDate ="{Binding Data_Final}"  SelectedDateFormat="Short" Margin="9,4,16,5" Grid.ColumnSpan="2"/>
 
-        <Label Content="Estat" Grid.Row="7" Grid.Column="0" Margin="17,4,27,8" />
-        <TextBox x:Name="Estat" Grid.Row="7" Text="{Binding Estat}" Margin="9,11,16,5" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Label Content="Estat" Grid.Row="7" Grid.Column="0"  Margin="17,0,61,10" />
+        <TextBox x:Name="Estat" Grid.Row="7" Text="{Binding Estat}" Margin="9,4,16,5" Grid.Column="1" Grid.ColumnSpan="2"/>
 
-        <Button Name="btnUpdate2" Content="Create" Grid.Row="8" Margin="123,0,0,0" Click="Afegir_Tascas" Grid.ColumnSpan="2"/>
+        <Button Name="EditTasca" Content="Desa" Grid.Row="8" Margin="123,0,0,0" Click="Edit_Tasca" Grid.ColumnSpan="2"/>
+
 
     </Grid>
 

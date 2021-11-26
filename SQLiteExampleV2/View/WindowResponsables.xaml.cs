@@ -27,19 +27,24 @@ namespace SQLiteExampleV2.View
             InitializeComponent();
         }
 
+        // Window_Loaded_Responsable
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             dgUsers.ItemsSource = UserService.GetAll();
         }
+
+        // Afegir Responsable
         private void AfegirUsuari(object sender, RoutedEventArgs e)
         {
             //Agafem les dades del item seleccionat
             User oUser = (User)dgUsers.SelectedItem;
             //Li passem l'usuari seleccionat al formulari Edit
-            WindowModificarResponsables w = new WindowModificarResponsables(oUser);
+            WindowAfegirResponsables w = new WindowAfegirResponsables(oUser);
             w.ShowDialog();
+            dgUsers.ItemsSource = UserService.GetAll();
         }
 
+        // Afegir Modificar Responsable
         private void ModificarUsuari(object sender, RoutedEventArgs e)
         {
             //Agafem les dades del item seleccionat
@@ -49,6 +54,7 @@ namespace SQLiteExampleV2.View
             w.ShowDialog();
         }
 
+        // Afegir Eliminar Responsable
         private void EliminarUsuari(object sender, RoutedEventArgs e)
         {
             if (MessageBox.Show("¿Eliminar usuario seleccionado?", "Eliminar", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
