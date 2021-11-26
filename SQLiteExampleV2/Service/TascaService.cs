@@ -187,8 +187,8 @@ namespace SQLiteExampleV2.Service
                     command.Parameters.Add(new SQLiteParameter("Colors", tasca.Colors));
                     command.Parameters.Add(new SQLiteParameter("Data_Inici", tasca.Data_Inici));
                     command.Parameters.Add(new SQLiteParameter("Data_Final", tasca.Data_Final));
-                    command.Parameters.Add(new SQLiteParameter("Codi", tasca.Codi));
                     command.Parameters.Add(new SQLiteParameter("Estat", tasca.Estat));
+                    command.Parameters.Add(new SQLiteParameter("Codi", tasca.Codi));
 
                     rows_afected = command.ExecuteNonQuery();
                 }

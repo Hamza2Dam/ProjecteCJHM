@@ -9,7 +9,7 @@
     <Grid Background="#FF9ABEDE">
         <DataGrid x:Name="dgUsers" VerticalAlignment="Top" HorizontalAlignment="Left" Width="Auto"
           AutoGenerateColumns="False" CanUserResizeColumns="True" CanUserAddRows="False" SelectionChanged="dgUsers_SelectionChanged">
-            
+
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" IsReadOnly="True" Binding="{Binding Id}" Width="50"/>
                 <DataGridTextColumn Header="Nom" IsReadOnly="True" Binding="{Binding Name}" Width="Auto"/>
@@ -17,14 +17,6 @@
                 <DataGridTextColumn Header="Data Naixement" IsReadOnly="True" Binding="{Binding Birthday}" Width="Auto"/>
                 <!--Añadimos botones editar y eliminar-->
 
-                <!--Boton Afegir -->
-                <DataGridTemplateColumn Header="Afegir" Width="60" >
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Content="Afegir" Click="AfegirUsuari" />
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
                 <!--Boton Modificar -->
                 <DataGridTemplateColumn Header="Modificar" Width="60" >
                     <DataGridTemplateColumn.CellTemplate>
@@ -44,5 +36,9 @@
 
             </DataGrid.Columns>
         </DataGrid>
+
+        <!--Boton Afegir -->
+        <Button Content="Afegir Responsable" Click="AfegirUsuari" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="74" Margin="359,0,0,0"/>
+
     </Grid>
 </Window>

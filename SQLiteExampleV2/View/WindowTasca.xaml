@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Tasca" Height="450" Width="900" Loaded="Window_Loaded2">
     <Grid Background="#FF9ABEDE">
-        
+
         <DataGrid x:Name="dgTasca" VerticalAlignment="Top" HorizontalAlignment="Left" Width="Auto"
           AutoGenerateColumns="False" CanUserResizeColumns="True" CanUserAddRows="False" SelectionChanged="dgTasca_SelectionChanged" >
 
@@ -20,14 +20,6 @@
                 <DataGridTextColumn Header="Data Final" IsReadOnly="True" Binding="{Binding Data_Final}" Width="Auto"/>
                 <DataGridTextColumn Header="Data Inici" IsReadOnly="True" Binding="{Binding Data_Inici}" Width="Auto"/>
                 <DataGridTextColumn Header="Colors" IsReadOnly="True" Binding="{Binding Estat}" Width="50"/>
-
-                <DataGridTemplateColumn Header="Afegir" Width="Auto" >
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Content="AfegirTasca" Click="AddTasca" />
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
 
                 <DataGridTemplateColumn Header="Editar" Width="Auto" >
                     <DataGridTemplateColumn.CellTemplate>
@@ -47,9 +39,12 @@
 
 
             </DataGrid.Columns>
-            
+
         </DataGrid>
-        
+        <!--Boton Afegir Tasca-->
+
+        <Button Content="Afegir" Click="AddTasca" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="74" Margin="534,0,0,0"/>
+
     </Grid>
-    
+
 </Window>
