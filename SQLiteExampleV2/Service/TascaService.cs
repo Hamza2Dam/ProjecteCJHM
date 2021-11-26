@@ -112,10 +112,7 @@ namespace SQLiteExampleV2.Service
             return result;
         }
 
-<<<<<<< HEAD
-        // GetALL
-=======
->>>>>>> 20638bb3ab785ac88168c5e9419b6bea1fcf5300
+        //GETALL
         public static List<Tasca> GetALL()
         {
             var result = new List<Tasca>();
@@ -148,17 +145,10 @@ namespace SQLiteExampleV2.Service
             }
             return result;
         }
-<<<<<<< HEAD
+
 
 
         // Add TASCA
-=======
-        /// <summary>
-        /// Afegeix un nou usuari a la base de dades
-        /// </summary>
-        /// <param nom="tasca">Entitat usuari</param>
-        /// <returns>El número d'usuaris afegits</returns>
->>>>>>> 20638bb3ab785ac88168c5e9419b6bea1fcf5300
         public int Add(Tasca tasca)
         {
             int rows_afected = 0;
