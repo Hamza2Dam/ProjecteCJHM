@@ -112,7 +112,7 @@ namespace SQLiteExampleV2.Service
             return result;
         }
 
-        //GETALL
+        // GETALL
         public static List<Tasca> GetALL()
         {
             var result = new List<Tasca>();
