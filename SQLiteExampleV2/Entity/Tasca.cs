@@ -15,7 +15,6 @@ namespace SQLiteExampleV2.Entity
         public string Colors { get; set; }
         public DateTime Data_Inici { get; set; }
         public DateTime Data_Final { get; set; }
-
         public string Estat { get; set; }
 
 
