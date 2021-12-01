@@ -16,7 +16,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using SQLiteExampleV2.Service;
 
-
 using SQLiteExampleV2.Persistence;
 using SQLiteExampleV2.View;
 using SQLiteExampleV2.Entity;
@@ -62,7 +61,7 @@ namespace SQLiteExampleV2
         // Window_Loaded_MAIN
         private void Window_Loaded_MAIN(object sender, RoutedEventArgs e)
         {
-
+            DbContext.Up();
             lbOne.ItemsSource = TascaService.GetTODO();
             lbTwo.ItemsSource = TascaService.GetDOING();
             lbThree.ItemsSource = TascaService.GetDONE();

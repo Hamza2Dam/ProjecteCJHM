@@ -6,7 +6,7 @@ namespace SQLiteExampleV2.Persistence
 {
     public class DbContext
     {
-        private const string DBName = "database7.sqlite";
+        private const string DBName = "database.sqlite";
         private const string SQLScript = @"..\..\..\Util\database.sql";
         private static bool IsDbRecentlyCreated = false;
 
