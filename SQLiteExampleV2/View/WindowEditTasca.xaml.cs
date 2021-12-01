@@ -53,6 +53,12 @@ namespace SQLiteExampleV2.View
             }
         }
 
+        private void Window_Loaded4(object sender, RoutedEventArgs e)
+        {
+            //Enllacem el control visual amb les dades
+            Responsable.ItemsSource = UserService.GetAll();
+        }
+
 
 
 

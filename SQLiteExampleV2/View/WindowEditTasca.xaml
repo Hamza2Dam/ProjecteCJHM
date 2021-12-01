@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SQLiteExampleV2.View"
         mc:Ignorable="d"
-        Title="Edit Tascas" Height="400" Width="350">
+        Title="Edit Tascas" Height="400" Width="350" Loaded="Window_Loaded4">
     <Grid Margin="10,10,10,10" Background="#FF9ABEDE" >
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
@@ -35,7 +35,7 @@
         <TextBox Name="Descripcio" Grid.Row="2" Grid.Column="1" Text="{Binding Descripcio}" Margin="9,4,16,5" Grid.ColumnSpan="2"/>
 
         <Label Content="Responsable:" Grid.Row="2" Grid.Column="0" Margin="17,27,27,8" Grid.RowSpan="2" ></Label>
-        <ComboBox Name="Responsable" Grid.Row="3" Grid.Column="1"  Margin="9,4,16,5" Grid.ColumnSpan="2" >
+        <ComboBox Name="Responsable" Grid.Row="3" Text="{Binding Responsable}" Grid.Column="1"  Margin="9,4,16,5" Grid.ColumnSpan="2" >
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
