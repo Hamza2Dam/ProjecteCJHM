@@ -18,7 +18,7 @@ namespace SQLiteExampleV2.Persistence
                 SQLiteConnection.CreateFile(DBName);
                 IsDbRecentlyCreated = true;
             }
-
+              
             using (var ctx = GetInstance())
             {
                 // Crea la base de datos solo la primera vez
