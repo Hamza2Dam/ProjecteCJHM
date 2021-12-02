@@ -215,15 +215,16 @@ namespace SQLiteExampleV2.Service
         }
 
 
-
-        public int TODO_DOING(Tasca tasca)
+        // Pasar la tasca de TODO a DOING
+        public int Update_Todo_Doing(int Codi)
         {
             int rows_afected = 0;
             using (var ctx = DbContext.GetInstance())
             {
-                string query = "UPDATE Tasca SET Estat = 'DOING' WHERE ";
+                string query = "UPDATE Tasca SET Estat = 'DOING' WHERE Codi = ?";
                 using (var command = new SQLiteCommand(query, ctx))
                 {
+                    command.Parameters.Add(new SQLiteParameter("Codi", Codi));
                     rows_afected = command.ExecuteNonQuery();
                 }
             }
@@ -231,14 +232,17 @@ namespace SQLiteExampleV2.Service
             return rows_afected;
         }
 
-        public int DOING_TODO(Tasca tasca)
+
+        // Pasar la tasca de DOING a TODO
+        public int Update_Doing_Todo(int Codi)
         {
             int rows_afected = 0;
             using (var ctx = DbContext.GetInstance())
             {
-                string query = "UPDATE Tasca SET Estat = 'TODO'";
+                string query = "UPDATE Tasca SET Estat = 'TODO' WHERE Codi = ?";
                 using (var command = new SQLiteCommand(query, ctx))
                 {
+                    command.Parameters.Add(new SQLiteParameter("Codi", Codi));
                     rows_afected = command.ExecuteNonQuery();
                 }
             }
@@ -246,14 +250,16 @@ namespace SQLiteExampleV2.Service
             return rows_afected;
         }
 
-        public int DOING_DONE (Tasca tasca)
+        // Pasar la tasca de DOING a DONE
+        public int Update_Doing_Done(int Codi)
         {
             int rows_afected = 0;
             using (var ctx = DbContext.GetInstance())
             {
-                string query = "UPDATE Tasca SET Estat = 'DONE'";
+                string query = "UPDATE Tasca SET Estat = 'DONE' WHERE Codi = ?";
                 using (var command = new SQLiteCommand(query, ctx))
                 {
+                    command.Parameters.Add(new SQLiteParameter("Codi", Codi));
                     rows_afected = command.ExecuteNonQuery();
                 }
             }
@@ -261,14 +267,16 @@ namespace SQLiteExampleV2.Service
             return rows_afected;
         }
 
-        public int DONE_DOING(Tasca tasca)
+        // Pasar la tasca de DONE a DOING
+        public int Update_Done_Doing(int Codi)
         {
             int rows_afected = 0;
             using (var ctx = DbContext.GetInstance())
             {
-                string query = "UPDATE Tasca SET Estat = 'DOING'";
+                string query = "UPDATE Tasca SET Estat = 'DOING' WHERE Codi = ?";
                 using (var command = new SQLiteCommand(query, ctx))
                 {
+                    command.Parameters.Add(new SQLiteParameter("Codi", Codi));
                     rows_afected = command.ExecuteNonQuery();
                 }
             }
