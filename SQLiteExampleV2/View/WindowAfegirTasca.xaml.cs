@@ -51,7 +51,9 @@ namespace SQLiteExampleV2.View
                 
                 t.Nom = Nom.Text;
                 t.Descripcio = Descripcio.Text;
-                t.Responsable = Responsable.Text;
+               // t.Responsable = (string)Responsable.SelectedItem;
+                User responsable = (User)Responsable.SelectedItem;
+                t.Responsable = responsable.Name;
                 t.Colors = Colors.Text;
                 t.Data_Inici =(DateTime)Data_Inici.SelectedDate;
                 t.Data_Final = (DateTime)Data_Final.SelectedDate;

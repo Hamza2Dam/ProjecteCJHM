@@ -99,7 +99,17 @@ namespace SQLiteExampleV2.Service
         }
 
 
-      
+
+        // Mostrar Nom del Responsables
+
+       
+
+
+
+
+
+
+
 
 
 
