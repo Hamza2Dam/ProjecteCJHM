@@ -82,12 +82,16 @@ namespace SQLiteExampleV2
         {
             try
             {
-                TascaService tascaService = new TascaService();
-                tascaService.TODO_DOING(oTasca);
+
+                Tasca oTasca = (Tasca)lbOne.SelectedItem;
+
+                TascaService oService = new TascaService();
+                oService.Update_Todo_Doing(oTasca.Codi);
 
                 lbOne.ItemsSource = TascaService.GetTODO();
                 lbTwo.ItemsSource = TascaService.GetDOING();
                 lbThree.ItemsSource = TascaService.GetDONE();
+
             }
 
             catch (Exception ex)
@@ -101,11 +105,16 @@ namespace SQLiteExampleV2
         {
             try
             {
-                TascaService tascaService = new TascaService();
-                tascaService.DOING_TODO(oTasca);
+
+                Tasca oTasca = (Tasca)lbTwo.SelectedItem;
+
+                TascaService oService = new TascaService();
+                oService.Update_Doing_Todo(oTasca.Codi);
+
                 lbOne.ItemsSource = TascaService.GetTODO();
                 lbTwo.ItemsSource = TascaService.GetDOING();
                 lbThree.ItemsSource = TascaService.GetDONE();
+
             }
 
             catch (Exception ex)
@@ -120,11 +129,16 @@ namespace SQLiteExampleV2
         {
             try
             {
-                TascaService tascaService = new TascaService();
-                tascaService.DOING_DONE(oTasca);
+
+                Tasca oTasca = (Tasca)lbTwo.SelectedItem;
+
+                TascaService oService = new TascaService();
+                oService.Update_Doing_Done(oTasca.Codi);
+
                 lbOne.ItemsSource = TascaService.GetTODO();
                 lbTwo.ItemsSource = TascaService.GetDOING();
                 lbThree.ItemsSource = TascaService.GetDONE();
+
             }
 
             catch (Exception ex)
@@ -138,11 +152,16 @@ namespace SQLiteExampleV2
         {
             try
             {
-                TascaService tascaService = new TascaService();
-                tascaService.DONE_DOING(oTasca);
+
+                Tasca oTasca = (Tasca)lbThree.SelectedItem;
+
+                TascaService oService = new TascaService();
+                oService.Update_Done_Doing(oTasca.Codi);
+
                 lbOne.ItemsSource = TascaService.GetTODO();
                 lbTwo.ItemsSource = TascaService.GetDOING();
                 lbThree.ItemsSource = TascaService.GetDONE();
+
             }
 
             catch (Exception ex)
