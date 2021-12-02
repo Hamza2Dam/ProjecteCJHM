@@ -40,7 +40,7 @@
                 <DataTemplate>
                     <StackPanel>
 
-                        <TextBox  Text="{Binding Name}" IsEnabled="False"></TextBox>
+                        <TextBox  Text="{Binding Name}" IsEnabled="True"></TextBox>
 
                     </StackPanel>
                 </DataTemplate>

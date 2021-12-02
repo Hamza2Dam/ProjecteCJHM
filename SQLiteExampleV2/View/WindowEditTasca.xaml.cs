@@ -42,7 +42,10 @@ namespace SQLiteExampleV2.View
         {
             try
             {
+                
                 TascaService tascaService = new TascaService();
+               
+
                 tascaService.Update(oTasca);
                 this.Close();
             }
