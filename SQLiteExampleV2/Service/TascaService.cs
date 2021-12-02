@@ -214,5 +214,68 @@ namespace SQLiteExampleV2.Service
             return rows_afected;
         }
 
+
+
+        public int TODO_DOING(Tasca tasca)
+        {
+            int rows_afected = 0;
+            using (var ctx = DbContext.GetInstance())
+            {
+                string query = "UPDATE Tasca SET Estat = 'DOING' WHERE ";
+                using (var command = new SQLiteCommand(query, ctx))
+                {
+                    rows_afected = command.ExecuteNonQuery();
+                }
+            }
+
+            return rows_afected;
+        }
+
+        public int DOING_TODO(Tasca tasca)
+        {
+            int rows_afected = 0;
+            using (var ctx = DbContext.GetInstance())
+            {
+                string query = "UPDATE Tasca SET Estat = 'TODO'";
+                using (var command = new SQLiteCommand(query, ctx))
+                {
+                    rows_afected = command.ExecuteNonQuery();
+                }
+            }
+
+            return rows_afected;
+        }
+
+        public int DOING_DONE (Tasca tasca)
+        {
+            int rows_afected = 0;
+            using (var ctx = DbContext.GetInstance())
+            {
+                string query = "UPDATE Tasca SET Estat = 'DONE'";
+                using (var command = new SQLiteCommand(query, ctx))
+                {
+                    rows_afected = command.ExecuteNonQuery();
+                }
+            }
+
+            return rows_afected;
+        }
+
+        public int DONE_DOING(Tasca tasca)
+        {
+            int rows_afected = 0;
+            using (var ctx = DbContext.GetInstance())
+            {
+                string query = "UPDATE Tasca SET Estat = 'DOING'";
+                using (var command = new SQLiteCommand(query, ctx))
+                {
+                    rows_afected = command.ExecuteNonQuery();
+                }
+            }
+
+            return rows_afected;
+        }
+
+
     }
 }

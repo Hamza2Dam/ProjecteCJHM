@@ -15,7 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using SQLiteExampleV2.Service;
-
+using System.Windows.Controls;
 using SQLiteExampleV2.Persistence;
 using SQLiteExampleV2.View;
 using SQLiteExampleV2.Entity;
@@ -27,10 +27,19 @@ namespace SQLiteExampleV2
     /// </summary>
     public partial class MainWindow : Window
     {
+        Tasca oTasca;
 
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        public MainWindow(Tasca tasca)
+        {
+            InitializeComponent();
+
+            oTasca = tasca;
+            this.DataContext = tasca;
         }
 
         private void Window_ContentRendered(object sender, EventArgs e)
@@ -71,29 +80,77 @@ namespace SQLiteExampleV2
         // Button_TODO_DOING
         private void Button_TODO_DOING(object sender, RoutedEventArgs e)
         {
-            Tasca Moure = (Tasca)lbOne.Items[lbOne.SelectedIndex];
-            Moure.Estat = "DOING";
-            lbOne.ItemsSource = TascaService.GetTODO();
-            lbTwo.ItemsSource = TascaService.GetDOING();
-            lbThree.ItemsSource = TascaService.GetDONE();
+            try
+            {
+                TascaService tascaService = new TascaService();
+                tascaService.TODO_DOING(oTasca);
+
+                lbOne.ItemsSource = TascaService.GetTODO();
+                lbTwo.ItemsSource = TascaService.GetDOING();
+                lbThree.ItemsSource = TascaService.GetDONE();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         // Button_DOING_TODO
         private void Button_DOING_TODO(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                TascaService tascaService = new TascaService();
+                tascaService.DOING_TODO(oTasca);
+                lbOne.ItemsSource = TascaService.GetTODO();
+                lbTwo.ItemsSource = TascaService.GetDOING();
+                lbThree.ItemsSource = TascaService.GetDONE();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 
         // Button_DOING_DONE
         private void Button_DOING_DONE(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                TascaService tascaService = new TascaService();
+                tascaService.DOING_DONE(oTasca);
+                lbOne.ItemsSource = TascaService.GetTODO();
+                lbTwo.ItemsSource = TascaService.GetDOING();
+                lbThree.ItemsSource = TascaService.GetDONE();
+            }
 
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         // Button_DONE_DOING
         private void Button_DONE_DOING(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                TascaService tascaService = new TascaService();
+                tascaService.DONE_DOING(oTasca);
+                lbOne.ItemsSource = TascaService.GetTODO();
+                lbTwo.ItemsSource = TascaService.GetDOING();
+                lbThree.ItemsSource = TascaService.GetDONE();
+            }
 
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
+
+
     }
 }
