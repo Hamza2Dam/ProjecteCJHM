@@ -60,7 +60,20 @@
         <DatePicker Name="Data_Final" Grid.Column="1" Grid.Row="6"  SelectedDate ="{Binding Data_Final}"  SelectedDateFormat="Short" Margin="9,4,16,5" Grid.ColumnSpan="2"/>
 
         <Label Content="Estat" Grid.Row="7" Grid.Column="0" Margin="17,4,27,8" />
-        <TextBox x:Name="Estat" Grid.Row="7" Text="{Binding Estat}" Margin="9,11,16,5" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+        <ComboBox Name="Estat" Grid.Row="7" Grid.Column="1" Text="{Binding Estat}"    Margin="9,7,16,8" Grid.ColumnSpan="2"  >
+           
+
+                        <ComboBoxItem>TODO</ComboBoxItem>
+                        <ComboBoxItem>DOING</ComboBoxItem>
+                        <ComboBoxItem>DONE</ComboBoxItem>
+
+               
+
+
+        </ComboBox>
+
+
 
         <Button Name="btnUpdate2" Content="Create" Grid.Row="8" Margin="123,0,0,0" Click="Afegir_Tascas" Grid.ColumnSpan="2"/>
 
