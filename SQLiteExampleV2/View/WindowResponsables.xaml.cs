@@ -57,7 +57,7 @@ namespace SQLiteExampleV2.View
         // Afegir Eliminar Responsable
         private void EliminarUsuari(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("¿Eliminar usuario seleccionado?", "Eliminar", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            if (MessageBox.Show("¿Eliminar usuario seleccionado?", "Eliminar", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes )
             {
                 try
                 {

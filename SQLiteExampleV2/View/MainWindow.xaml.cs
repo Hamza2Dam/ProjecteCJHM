@@ -15,7 +15,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using SQLiteExampleV2.Service;
-using System.Windows.Controls;
 using SQLiteExampleV2.Persistence;
 using SQLiteExampleV2.View;
 using SQLiteExampleV2.Entity;
@@ -80,95 +79,119 @@ namespace SQLiteExampleV2
         // Button_TODO_DOING
         private void Button_TODO_DOING(object sender, RoutedEventArgs e)
         {
-            try
+            if (lbOne.SelectedItem != null) 
             {
+                try
+                {
+                    //Agafem les dades del item seleccionat
+                    Tasca oTasca = (Tasca)lbOne.SelectedItem;
 
-                Tasca oTasca = (Tasca)lbOne.SelectedItem;
+                    // Actualitzem l'Estat De la tasca
+                    TascaService oService = new TascaService();
+                    oService.Update_Todo_Doing(oTasca.Codi);
 
-                TascaService oService = new TascaService();
-                oService.Update_Todo_Doing(oTasca.Codi);
 
-                lbOne.ItemsSource = TascaService.GetTODO();
-                lbTwo.ItemsSource = TascaService.GetDOING();
-                lbThree.ItemsSource = TascaService.GetDONE();
+                    //Actualitzem dades del ListBox 
+                    lbOne.ItemsSource = TascaService.GetTODO();
+                    lbTwo.ItemsSource = TascaService.GetDOING();
+                    lbThree.ItemsSource = TascaService.GetDONE();
 
-            }
+                }
 
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
         // Button_DOING_TODO
         private void Button_DOING_TODO(object sender, RoutedEventArgs e)
         {
-            try
+            if (lbTwo.SelectedItem != null)
             {
+                try
+                {
 
-                Tasca oTasca = (Tasca)lbTwo.SelectedItem;
+                    //Agafem les dades del item seleccionat
+                    Tasca oTasca = (Tasca)lbTwo.SelectedItem;
 
-                TascaService oService = new TascaService();
-                oService.Update_Doing_Todo(oTasca.Codi);
+                    // Actualitzem l'Estat De la tasca
+                    TascaService oService = new TascaService();
+                    oService.Update_Doing_Todo(oTasca.Codi);
 
-                lbOne.ItemsSource = TascaService.GetTODO();
-                lbTwo.ItemsSource = TascaService.GetDOING();
-                lbThree.ItemsSource = TascaService.GetDONE();
+                    //Actualitzem dades del ListBox 
+                    lbOne.ItemsSource = TascaService.GetTODO();
+                    lbTwo.ItemsSource = TascaService.GetDOING();
+                    lbThree.ItemsSource = TascaService.GetDONE();
 
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
         }
 
         // Button_DOING_DONE
         private void Button_DOING_DONE(object sender, RoutedEventArgs e)
         {
-            try
+            if (lbTwo.SelectedItem != null)
             {
+                try
+                {
 
-                Tasca oTasca = (Tasca)lbTwo.SelectedItem;
+                    //Agafem les dades del item seleccionat
+                    Tasca oTasca = (Tasca)lbTwo.SelectedItem;
 
-                TascaService oService = new TascaService();
-                oService.Update_Doing_Done(oTasca.Codi);
+                    // Actualitzem l'Estat De la tasca
+                    TascaService oService = new TascaService();
+                    oService.Update_Doing_Done(oTasca.Codi);
 
-                lbOne.ItemsSource = TascaService.GetTODO();
-                lbTwo.ItemsSource = TascaService.GetDOING();
-                lbThree.ItemsSource = TascaService.GetDONE();
+                    //Actualitzem dades del ListBox 
+                    lbOne.ItemsSource = TascaService.GetTODO();
+                    lbTwo.ItemsSource = TascaService.GetDOING();
+                    lbThree.ItemsSource = TascaService.GetDONE();
 
-            }
+                }
 
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
         // Button_DONE_DOING
         private void Button_DONE_DOING(object sender, RoutedEventArgs e)
         {
-            try
+            if (lbThree.SelectedItem != null)
             {
+                try
+                {
 
-                Tasca oTasca = (Tasca)lbThree.SelectedItem;
+                    //Agafem les dades del item seleccionat
+                    Tasca oTasca = (Tasca)lbThree.SelectedItem;
 
-                TascaService oService = new TascaService();
-                oService.Update_Done_Doing(oTasca.Codi);
+                    // Actualitzem l'Estat De la tasca
+                    TascaService oService = new TascaService();
+                    oService.Update_Done_Doing(oTasca.Codi);
 
-                lbOne.ItemsSource = TascaService.GetTODO();
-                lbTwo.ItemsSource = TascaService.GetDOING();
-                lbThree.ItemsSource = TascaService.GetDONE();
+                    //Actualitzem dades del ListBox 
+                    lbOne.ItemsSource = TascaService.GetTODO();
+                    lbTwo.ItemsSource = TascaService.GetDOING();
+                    lbThree.ItemsSource = TascaService.GetDONE();
 
-            }
+                }
 
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
+
 
 
     }
