@@ -5,33 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SQLiteExampleV2.View"
         mc:Ignorable="d"
-        Title="Afegir Reponsable" Height="200" Width="300">
-    <Grid Margin="10,10,10,10" Background="#FF9ABEDE">
+        Title="Afegir Reponsable" Height="250" Width="400">
+    <Grid Margin="10,10,10,10" Background="#FFA9A9A9">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="34"/>
+            <RowDefinition Height="26"/>
+            <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="218"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
         <Label Content="Id:" Grid.Row="0" Grid.Column="0"></Label>
-        <TextBlock Name="Id" Grid.Row="0" Grid.Column="1" Text="{Binding Id}"></TextBlock>
+        <TextBlock Name="Id" Grid.Row="0" Grid.Column="1" Text="{Binding Id}" Margin="5,5,4,5"></TextBlock>
 
         <Label Content="Nom:" Grid.Row="1" Grid.Column="0"></Label>
-        <TextBox Name="Name" Grid.Row="1" Grid.Column="1" Text="{Binding Name}" Margin="5,5,2,26" Grid.RowSpan="2"></TextBox>
+        <TextBox Name="Name" Grid.Row="1" Grid.Column="1" Text="{Binding Name}" Margin="5,4,4,4" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
 
         <Label Content="Cognom:" Grid.Row="2" Grid.Column="0"></Label>
-        <TextBox Name="LastName" Grid.Row="2" Grid.Column="1" Text="{Binding LastName}" Margin="5,2,2,3"></TextBox>
+        <TextBox Name="LastName" Grid.Row="2" Grid.Column="1" Text="{Binding LastName}" Margin="5,2,4,3"></TextBox>
 
         <Label Content="Data Naixement:" Grid.Row="3" Grid.Column="0"></Label>
-        <DatePicker Name="Birthday" Grid.Row="3" Grid.Column="1" SelectedDate ="{Binding Birthday}" SelectedDateFormat="Short" Margin="0,4,6,10"/>
+        <DatePicker Name="Birthday" Grid.Row="3" Grid.Column="1" SelectedDate ="{Binding Birthday}" SelectedDateFormat="Short" Margin="5,6,4,6"/>
 
-        <Button Name="btnUpdate" Content="Create" Grid.Row="3" Grid.Column="1" Margin="0,43,0,0" Grid.RowSpan="2" Click="AfegirReponsable_Click"></Button>
+        <Button Name="btnUpdate" Content="Create" Grid.Row="4" Grid.Column="1" Click="AfegirReponsable_Click" Margin="40,3,36,5"/>
 
     </Grid>
 </Window>

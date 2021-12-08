@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:SQLiteExampleV2.View"
         mc:Ignorable="d"
         Title="Modificar Responsable" Height="200" Width="300">
-    <Grid Margin="10,10,10,10" Background="#FF9ABEDE">
+    <Grid Margin="10,10,10,10" Background="#FFA9A9A9">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -23,15 +23,15 @@
         <TextBlock Name="Id" Grid.Row="0" Grid.Column="1" Text="{Binding Id}"></TextBlock>
 
         <Label Content="Nom:" Grid.Row="1" Grid.Column="0"></Label>
-        <TextBox Name="Name" Grid.Row="1" Grid.Column="1" Text="{Binding Name}" Margin="5,5,2,26" Grid.RowSpan="2"></TextBox>
-        
+        <TextBox Name="Name" Grid.Row="1" Grid.Column="1" Text="{Binding Name}" Margin="6,2,4,3"/>
+
         <Label Content="Cognom:" Grid.Row="2" Grid.Column="0"></Label>
-        <TextBox Name="LastName" Grid.Row="2" Grid.Column="1" Text="{Binding LastName}" Margin="5,2,2,3"></TextBox>
+        <TextBox Name="LastName" Grid.Row="2" Grid.Column="1" Text="{Binding LastName}" Margin="5,2,4,3"></TextBox>
 
         <Label Content="Data Naixement:" Grid.Row="3" Grid.Column="0"></Label>
-        <DatePicker Name="BirthDate" Grid.Row="3" Grid.Column="1" SelectedDate ="{Binding Birthday}" SelectedDateFormat="Short" Margin="6,2,4,60" Grid.RowSpan="2"></DatePicker>
+        <DatePicker Name="BirthDate" Grid.Row="3" Grid.Column="1" SelectedDate ="{Binding Birthday}" SelectedDateFormat="Short" Margin="6,4,4,8"/>
 
-        <Button Name="btnUpdate" Content="Desa" Grid.Row="3" Grid.Column="1" Margin="0,43,0,0" Grid.RowSpan="2" Click="ModificarReponsable_Click"></Button>
+        <Button Name="btnUpdate" Content="Desa" Grid.Row="4" Grid.Column="1" Margin="6,7,4,10" Click="ModificarReponsable_Click"/>
 
     </Grid>
 </Window>

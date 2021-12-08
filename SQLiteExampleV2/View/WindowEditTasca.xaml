@@ -6,18 +6,18 @@
         xmlns:local="clr-namespace:SQLiteExampleV2.View"
         mc:Ignorable="d"
         Title="Edit Tascas" Height="400" Width="350" Loaded="Window_Loaded4">
-    <Grid Margin="10,10,10,10" Background="#FF9ABEDE" >
+    <Grid Margin="10,10,10,10" Background="#FFA9A9A9" >
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="37"/>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="29*"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="34"/>
+            <RowDefinition Height="36"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="84*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
@@ -69,7 +69,7 @@
 
         </ComboBox>
 
-        <Button Name="EditTasca" Content="Desa" Grid.Row="8" Margin="123,0,0,0" Click="Edit_Tasca" Grid.ColumnSpan="2"/>
+        <Button Name="EditTasca" Content="Desa" Grid.Row="8" Margin="10,0,102,0" Click="Edit_Tasca" Grid.ColumnSpan="2" Grid.Column="1"/>
 
 
     </Grid>

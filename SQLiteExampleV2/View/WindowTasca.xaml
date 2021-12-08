@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SQLiteExampleV2.View"
         mc:Ignorable="d"
-        Title="Tasca" Height="450" Width="900" Loaded="Window_Loaded2">
-    <Grid Background="#FF9ABEDE">
+        Title="Tasca" Height="300" MaxWidth="780" Loaded="Window_Loaded2">
+    <Grid Background="#FFA9A9A9">
 
         <DataGrid x:Name="dgTasca" VerticalAlignment="Top" HorizontalAlignment="Left" Width="Auto"
           AutoGenerateColumns="False" CanUserResizeColumns="True" CanUserAddRows="False" SelectionChanged="dgTasca_SelectionChanged" >
@@ -16,10 +16,29 @@
                 <DataGridTextColumn Header="Nom" IsReadOnly="True" Binding="{Binding Nom}" Width="Auto"/>
                 <DataGridTextColumn Header="Descripcio" IsReadOnly="True" Binding="{Binding Descripcio}" Width="Auto"/>
                 <DataGridTextColumn Header="Responsable" IsReadOnly="True" Binding="{Binding Responsable}" Width="Auto"/>
-                <DataGridTextColumn Header="Colors" IsReadOnly="True" Binding="{Binding Colors}" Width="50"/>
+
+                <DataGridTextColumn  Header="Colors" Binding="{Binding Colors}" Width="Auto">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Style.Triggers>
+                                <Trigger Property="Text" Value="GREEN">
+                                    <Setter Property="Background" Value="LightGreen"/>
+                                </Trigger>
+                                <Trigger Property="Text" Value="YELLOW">
+                                    <Setter Property="Background" Value="Yellow"/>
+                                </Trigger>
+                                <Trigger Property="Text" Value="RED">
+                                    <Setter Property="Background" Value="Red"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+
+
                 <DataGridTextColumn Header="Data Final" IsReadOnly="True" Binding="{Binding Data_Final}" Width="Auto"/>
                 <DataGridTextColumn Header="Data Inici" IsReadOnly="True" Binding="{Binding Data_Inici}" Width="Auto"/>
-                <DataGridTextColumn Header="Colors" IsReadOnly="True" Binding="{Binding Estat}" Width="50"/>
+                <DataGridTextColumn Header="Estat" IsReadOnly="True" Binding="{Binding Estat}" Width="50"/>
 
                 <DataGridTemplateColumn Header="Editar" Width="Auto" >
                     <DataGridTemplateColumn.CellTemplate>
@@ -40,10 +59,9 @@
 
             </DataGrid.Columns>
 
-        </DataGrid>
-        <!--Boton Afegir Tasca-->
 
-        <Button Content="Afegir" Click="AddTasca" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="74" Margin="534,0,0,0"/>
+
+        </DataGrid>
 
     </Grid>
 

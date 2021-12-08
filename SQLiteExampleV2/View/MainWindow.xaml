@@ -5,72 +5,129 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SQLiteExampleV2"
         mc:Ignorable="d"
-        Title="TO DO "  MinHeight="500"  MinWidth="800"  Loaded="Window_Loaded_MAIN" ContentRendered="Window_ContentRendered">
+        Title="TO DO "  MaxHeight="500"  MaxWidth="880"  Loaded="Window_Loaded_MAIN">
 
-    <Grid Background="#FF9A9ADE">
+    <Grid Background="#FFA9A9A9">
+        <Grid.FocusVisualStyle>
+            <Style/>
+        </Grid.FocusVisualStyle>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="130*"/>
-            <ColumnDefinition Width="130*"/>
-            <ColumnDefinition Width="130*"/>
-
-            <ColumnDefinition/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="31"/>
+            <ColumnDefinition Width="190"/>
+            <ColumnDefinition Width="9"/>
+            <ColumnDefinition Width="21"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="21"/>
+            <ColumnDefinition Width="6"/>
+            <ColumnDefinition Width="190"/>
+            <ColumnDefinition Width="11"/>
+            <ColumnDefinition Width="16"/>
+            <ColumnDefinition Width="16"/>
+            <ColumnDefinition Width="16"/>
+            <ColumnDefinition Width="9"/>
+            <ColumnDefinition Width="190"/>
+            <ColumnDefinition Width="64"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="60*"/>
-            <RowDefinition Height="30*"/>
-            <RowDefinition Height="340*"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="43.04"/>
+            <RowDefinition Height="6.96"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="8.04"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="8"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="156"/>
+            <RowDefinition Height="77.96"/>
         </Grid.RowDefinitions>
 
-        <Button Content="&lt;"  VerticalAlignment="Top" HorizontalAlignment="Center" Click="Button_DOING_TODO" Margin="237,0,266,0" Grid.ColumnSpan="2" Grid.Row="1"/>
-        <Button Content="&gt;"  VerticalAlignment="Top" HorizontalAlignment="Center" Click="Button_TODO_DOING" Margin="0,0,237,0" Grid.Row="1" Grid.Column="1"/>
-        <Button Content="&lt;"  VerticalAlignment="Top" HorizontalAlignment="Center" Click="Button_DONE_DOING" Margin="213,0,5,0" Grid.Column="1" Grid.Row="1"/>
-        <Button Content="&gt;"  VerticalAlignment="Top" HorizontalAlignment="Center" Click="Button_DOING_DONE" Margin="0,0,209,0" Grid.Column="2" Grid.Row="1"/>
-
-        <ListBox Name="lbOne"   
-                 HorizontalAlignment="Left" Margin="10,10,0,8" Width="241" 
-                 ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Row="2" Background="#FFEE7878">
+        <ListBox Name="lbOne" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Column="3" Grid.Row="2" Grid.RowSpan="8" Margin="0,5,0,0" FontWeight="Bold" FontFamily="Arial Black" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
                         <TextBlock  Text="{Binding Nom}"></TextBlock>
+                        <TextBlock  Text="{Binding Colors}"></TextBlock>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <ListBox x:Name="lbTwo" 
-                 HorizontalAlignment="Center" Margin="0,10,0,8" Width="246" 
-                 ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Row="2" Grid.Column="1" Background="#FFF1FF99">
+        <ListBox x:Name="lbTwo" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Column="9" Margin="0,4,0,0" Grid.RowSpan="8" Grid.Row="2" FontWeight="Bold" FontFamily="Arial Black" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
                         <TextBlock  Text="{Binding Nom}"></TextBlock>
+                        <TextBlock  Text="{Binding Colors}"></TextBlock>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
-        </ListBox>
-        <!-- -->
 
-        <ListBox x:Name="lbThree"
-                 HorizontalAlignment="Center" Margin="0,10,0,8" Width="251" 
-                 ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Row="2" Grid.Column="2" Background="#FF85EAA5">
+        </ListBox>
+
+        <ListBox x:Name="lbThree" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Column="15" Grid.Row="2" Grid.RowSpan="8" Margin="0,5,0,0" FontWeight="Bold" FontFamily="Arial Black">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
                         <TextBlock  Text="{Binding Nom}"></TextBlock>
+                        <TextBlock  Text="{Binding Colors}">
+                            
+                            
+                        </TextBlock>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
+
         </ListBox>
 
-        <TextBlock Height="AUTO" Text="TO DO" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center"  VerticalAlignment="Top"  Grid.Row="1" Grid.Column="0" />
-        <TextBlock Height="AUTO" Text="DOING" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center"  VerticalAlignment="Top"  Grid.Column="1" Grid.Row="1" />
-        <TextBlock Height="AUTO" Text="DONE"  FontSize="25" FontWeight="Bold" HorizontalAlignment="Center"  VerticalAlignment="Top"  Grid.Column="2" Grid.Row="1" />
 
-        <Button Name="AfegirResponsable_Button"  Content="Afegir Responsable" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="27" Width="116" Margin="140,11,0,0" Click="AfegirResponsable_Button_Click" Background="#FF25E4EE" />
-        <Button Name="AfegirTasca_Button" Content="Afegir Tasca" HorizontalAlignment="Left" VerticalAlignment="Top" Height="27" Width="116" Margin="10,11,0,0"  Click="AfegirTasca_Button_Click" Background="#FF29E3EC"/>
+        <TextBlock Height="43" Text="TO DO" FontSize="25" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center"  VerticalAlignment="Center" Grid.Column="3" Width="176" Grid.Row="1" />
+        <TextBlock Height="43" Text="DOING" FontSize="25" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center"  VerticalAlignment="Center"  Grid.Column="9" Width="176" Grid.Row="1" />
+        <TextBlock Height="43" Text="DONE"  FontSize="25" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center"  VerticalAlignment="Center"  Grid.Column="15" Width="176" Grid.Row="1" />
 
+        <Button Name="AfegirTasca_Button" Click="AfegirTasca_Button_Click" Grid.Column="1" Grid.RowSpan="2" Grid.Row="1" >
+            <StackPanel>
+                <Image Source="\Capture1.jpg"/>
+            </StackPanel>
+        </Button>
+
+        <Button  Name="AfegirResponsable_Button" Click="AfegirResponsable_Button_Click" Grid.Column="1" Grid.Row="5" Margin="0,2,0,0">
+            <StackPanel>
+                <Image Source="\Capture2.jpg" Width="46" Height="46"/>
+            </StackPanel>
+        </Button>
+
+        <Button  Name="VeureTasca"  Click="VeureTasca_Button_Click" Grid.Column="1" Grid.Row="3">
+            <StackPanel>
+                <Image Source="\Capture3.jpg" Width="53" Height="48"/>
+
+            </StackPanel>
+        </Button>
+
+        <Button  Name="VeureResponsables" Click="VeureResponsables_Button_Click" Grid.Column="1" Grid.Row="5" Margin="0,50,0,0" Grid.RowSpan="2">
+            <StackPanel>
+                <Image Source="\Capture4.jpg" Height="58"/>
+            </StackPanel>
+        </Button>
+
+        <Button Grid.Column="1" HorizontalAlignment="Center" Grid.Row="8" VerticalAlignment="Center" Width="50" Height="50" Click="Button_Refresh" >
+            <StackPanel>
+                <Image Source="\Capture5.jpg" Height="46"/>
+            </StackPanel>
+        </Button>
+
+        <Button Content="&lt;"   FontSize="25" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Button_DOING_TODO" Grid.Column="5" Height="50" Width="32" Grid.Row="6"/>
+        <Button Content="&gt;"   FontSize="25" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Button_TODO_DOING" Grid.Column="7" Height="50" Width="22" Grid.Row="6"/>
+        <Button Content="&lt;"   FontSize="25" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Button_DONE_DOING" Grid.Column="11" Height="50" Width="32" Grid.Row="6"/>
+        <Button Content="&gt;"   FontSize="25" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Button_DOING_DONE" Grid.Column="13" Height="50" Width="24" Grid.Row="6"/>
+
+        <Border BorderThickness="3" BorderBrush="#FF808080" Margin="0,0,0,3" Grid.Column="3" Grid.Row="1"/>
+        <Border BorderThickness="3" BorderBrush="#FF808080" Grid.Column="9" Grid.Row="1"/>
+        <Border BorderThickness="3" BorderBrush="#FF808080" Grid.Column="15" Grid.Row="1"/>
+        
 
 
 

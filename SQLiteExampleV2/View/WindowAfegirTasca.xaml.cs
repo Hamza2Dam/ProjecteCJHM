@@ -44,21 +44,21 @@ namespace SQLiteExampleV2.View
         // Afegir Tasca
         private void Afegir_Tascas(object sender, RoutedEventArgs e)
         {
-            try { 
-            
+            try
+            {
                 TascaService tascaService = new TascaService();
                 Tasca t = new Tasca();
-                
+
                 t.Nom = Nom.Text;
                 t.Descripcio = Descripcio.Text;
-               // t.Responsable = (string)Responsable.SelectedItem;
+                // t.Responsable = (string)Responsable.SelectedItem;
                 User responsable = (User)Responsable.SelectedItem;
                 t.Responsable = responsable.Name;
                 t.Colors = Colors.Text;
-                t.Data_Inici =(DateTime)Data_Inici.SelectedDate;
+                t.Data_Inici = (DateTime)Data_Inici.SelectedDate;
                 t.Data_Final = (DateTime)Data_Final.SelectedDate;
                 t.Estat = Estat.Text;
-                
+
                 tascaService.Add(t);
                 this.Close();
             }
@@ -66,6 +66,7 @@ namespace SQLiteExampleV2.View
             {
                 MessageBox.Show(ex.Message);
             }
+            
         }
 
         private void Window_Loaded4(object sender, RoutedEventArgs e)

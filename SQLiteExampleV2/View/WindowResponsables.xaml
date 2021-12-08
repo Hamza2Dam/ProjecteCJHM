@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SQLiteExampleV2.View"
         mc:Ignorable="d"
-        Title="Responsables" Height="450" Width="800" Loaded="Window_Loaded">
-    <Grid Background="#FF9ABEDE">
+        Title="Responsables" Height="300" MaxWidth="500" Loaded="Window_Loaded">
+    <Grid Background="#FFA9A9A9">
         <DataGrid x:Name="dgUsers" VerticalAlignment="Top" HorizontalAlignment="Left" Width="Auto"
           AutoGenerateColumns="False" CanUserResizeColumns="True" CanUserAddRows="False" SelectionChanged="dgUsers_SelectionChanged">
 
@@ -36,9 +36,6 @@
 
             </DataGrid.Columns>
         </DataGrid>
-
-        <!--Boton Afegir -->
-        <Button Content="Afegir Responsable" Click="AfegirUsuari" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="74" Margin="359,0,0,0"/>
 
     </Grid>
 </Window>

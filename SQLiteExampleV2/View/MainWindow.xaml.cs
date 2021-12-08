@@ -41,16 +41,13 @@ namespace SQLiteExampleV2
             this.DataContext = tasca;
         }
 
+
         private void Window_ContentRendered(object sender, EventArgs e)
         {
             DbContext.Up();
         }
-
-        // RESPONSABLE
-        private void AfegirResponsable_Button_Click(object sender, RoutedEventArgs e)
+        private void Refresh()
         {
-            WindowResponsables form = new WindowResponsables();
-            form.ShowDialog();
             lbOne.ItemsSource = TascaService.GetTODO();
             lbTwo.ItemsSource = TascaService.GetDOING();
             lbThree.ItemsSource = TascaService.GetDONE();
@@ -59,20 +56,38 @@ namespace SQLiteExampleV2
         // TASCAS
         private void AfegirTasca_Button_Click(object sender, RoutedEventArgs e)
         {
+            WindowAfegirTasca form = new WindowAfegirTasca();
+            form.ShowDialog();
+            Refresh();
+        }
+
+        private void VeureTasca_Button_Click(object sender, RoutedEventArgs e)
+        {
             WindowTasca form = new WindowTasca();
             form.ShowDialog();
-            lbOne.ItemsSource = TascaService.GetTODO();
-            lbTwo.ItemsSource = TascaService.GetDOING();
-            lbThree.ItemsSource = TascaService.GetDONE();
         }
+
+        // RESPONSABLE
+        private void AfegirResponsable_Button_Click(object sender, RoutedEventArgs e)
+        {
+            WindowAfegirResponsables form = new WindowAfegirResponsables();
+            form.ShowDialog();
+            Refresh();
+        }
+
+        private void VeureResponsables_Button_Click(object sender, RoutedEventArgs e)
+        {
+            WindowResponsables form = new WindowResponsables();
+            form.ShowDialog();
+        }
+
+
 
         // Window_Loaded_MAIN
         private void Window_Loaded_MAIN(object sender, RoutedEventArgs e)
         {
             DbContext.Up();
-            lbOne.ItemsSource = TascaService.GetTODO();
-            lbTwo.ItemsSource = TascaService.GetDOING();
-            lbThree.ItemsSource = TascaService.GetDONE();
+            Refresh();
 
         }
 
@@ -92,9 +107,7 @@ namespace SQLiteExampleV2
 
 
                     //Actualitzem dades del ListBox 
-                    lbOne.ItemsSource = TascaService.GetTODO();
-                    lbTwo.ItemsSource = TascaService.GetDOING();
-                    lbThree.ItemsSource = TascaService.GetDONE();
+                    Refresh();
 
                 }
 
@@ -121,9 +134,7 @@ namespace SQLiteExampleV2
                     oService.Update_Doing_Todo(oTasca.Codi);
 
                     //Actualitzem dades del ListBox 
-                    lbOne.ItemsSource = TascaService.GetTODO();
-                    lbTwo.ItemsSource = TascaService.GetDOING();
-                    lbThree.ItemsSource = TascaService.GetDONE();
+                    Refresh();
 
                 }
 
@@ -150,9 +161,7 @@ namespace SQLiteExampleV2
                     oService.Update_Doing_Done(oTasca.Codi);
 
                     //Actualitzem dades del ListBox 
-                    lbOne.ItemsSource = TascaService.GetTODO();
-                    lbTwo.ItemsSource = TascaService.GetDOING();
-                    lbThree.ItemsSource = TascaService.GetDONE();
+                    Refresh();
 
                 }
 
@@ -179,9 +188,7 @@ namespace SQLiteExampleV2
                     oService.Update_Done_Doing(oTasca.Codi);
 
                     //Actualitzem dades del ListBox 
-                    lbOne.ItemsSource = TascaService.GetTODO();
-                    lbTwo.ItemsSource = TascaService.GetDOING();
-                    lbThree.ItemsSource = TascaService.GetDONE();
+                    Refresh();
 
                 }
 
@@ -189,10 +196,13 @@ namespace SQLiteExampleV2
                 {
                     MessageBox.Show(ex.Message);
                 }
+
             }
         }
 
-
-
+        private void Button_Refresh(object sender, RoutedEventArgs e)
+        {
+            Refresh();
+        }
     }
 }
