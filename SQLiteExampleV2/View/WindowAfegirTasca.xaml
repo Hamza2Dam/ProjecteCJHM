@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SQLiteExampleV2.View"
         mc:Ignorable="d"
-        Title="Afegir Tascas" Height="400" Width="400"  Loaded="Window_Loaded4" >
+        Title="Afegir Tascas" MaxHeight="400" MaxWidth="400"  Loaded="Window_Loaded4" >
 
     <Grid Margin="10,10,10,10" Background="#FFA9A9A9">
         <Grid.RowDefinitions>
@@ -26,50 +26,50 @@
             <ColumnDefinition Width="112*"/>
         </Grid.ColumnDefinitions>
 
-        <Label Content="Codi:" Grid.Row="0" Grid.Column="0" Margin="17,0,27,5"/>
-        <TextBlock Name="Codi" Grid.Row="0" Grid.Column="1" Text="{Binding Codi}" Margin="9,4,16,5" Grid.ColumnSpan="2" />
+        <Label  Content="Codi:" FontWeight="Bold" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="0" Margin="17,0,27,5"/>
+        <TextBlock Name="Codi" FontWeight="Bold" TextBlock.TextAlignment="Center" Grid.Row="0" Grid.Column="1" Text="{Binding Codi}" Margin="9,4,16,5" Grid.ColumnSpan="2" />
 
-        <Label Content="Nom:" Grid.Row="1" Grid.Column="0" Margin="17,0,27,5"/>
-        <TextBox Name="Nom" Grid.Row="1" Grid.Column="1" Text="{Binding Nom}"  Margin="10,2,16,5" Grid.ColumnSpan="2"/>
+        <Label Content="Nom:" FontWeight="Bold"  Grid.Row="1" Grid.Column="0" Margin="17,0,27,5"/>
+        <TextBox Name="Nom" FontWeight="Bold" HorizontalContentAlignment="Center" Grid.Row="1" Grid.Column="1" Text="{Binding Nom}"  Margin="10,2,16,5" Grid.ColumnSpan="2"/>
 
-        <Label Content="Descripcio:" Grid.Row="2" Grid.Column="0" Margin="17,0,27,5" ></Label>
-        <TextBox Name="Descripcio" Grid.Row="2" Grid.Column="1" Text="{Binding Descripcio}" Margin="10,2,16,5" Grid.ColumnSpan="2"/>
+        <Label Content="Descripcio:" FontWeight="Bold" Grid.Row="2" Grid.Column="0" Margin="17,0,27,5" ></Label>
+        <TextBox Name="Descripcio" FontWeight="Bold" HorizontalContentAlignment="Center" Grid.Row="2" Grid.Column="1" Text="{Binding Descripcio}" Margin="10,2,16,5" Grid.ColumnSpan="2"/>
 
-        <Label Content="Responsable:" Grid.Row="3" Grid.Column="0" Margin="17,2,27,8" />
-        <ComboBox Name="Responsable" Grid.Row="3" Grid.Column="1" Text="{Binding Responsable}" Margin="10,0,16,5" Grid.ColumnSpan="2"  >
+        <Label Content="Responsable:" FontWeight="Bold" Grid.Row="3" Grid.Column="0" Margin="17,2,27,8" />
+        <ComboBox Name="Responsable" FontWeight="Bold" Grid.Row="3" Grid.Column="1" Text="{Binding Responsable}" Margin="10,0,16,5" Grid.ColumnSpan="2"  >
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
-                        <TextBox  Text="{Binding Name}" IsEnabled="True"></TextBox>
+                        <TextBox  Text="{Binding Name}" IsEnabled="False" FontWeight="Bold" ></TextBox>
                     </StackPanel>
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
 
-        <Label Content="Colors:" Grid.Row="4" Grid.Column="0" Margin="17,0,27,8" />
-        <ComboBox Name="Colors" Grid.Row="4" Text="{Binding Colors}" Grid.ColumnSpan="2" Grid.Column="1" Margin="10,0,16,5"  >
-            <ComboBoxItem Foreground="#FFFF0505">RED</ComboBoxItem>
-            <ComboBoxItem Foreground="#FFFFE800">YELLOW</ComboBoxItem>
-            <ComboBoxItem Foreground="#FF00FF23">GREEN</ComboBoxItem>
+        <Label Content="Colors:" FontWeight="Bold" Grid.Row="4" Grid.Column="0" Margin="17,0,27,8" />
+        <ComboBox Name="Colors" FontWeight="Bold" Grid.Row="4" Text="{Binding Colors}" Grid.ColumnSpan="2" Grid.Column="1" Margin="10,0,16,5"  >
+            <ComboBoxItem Foreground="#FFFF0505" FontWeight="Bold" >RED</ComboBoxItem>
+            <ComboBoxItem Foreground="#FFFFE800" FontWeight="Bold" >YELLOW</ComboBoxItem>
+            <ComboBoxItem Foreground="#FF00FF23" FontWeight="Bold" >GREEN</ComboBoxItem>
         </ComboBox>
 
-        <Label Content="Data Inici:" Grid.Row="5" Grid.Column="0" Margin="17,0,27,5"/>
-        <DatePicker Name="Data_Inici" Grid.Row="5" Grid.Column="1" SelectedDate ="{Binding Data_Inici}" SelectedDateFormat="Short" Margin="10,4,16,1" Grid.ColumnSpan="2"/>
+        <Label Content="Data Inici:" FontWeight="Bold" Grid.Row="5" Grid.Column="0" Margin="17,2,27,3"/>
+        <DatePicker Name="Data_Inici" Grid.Row="5" FontWeight="Bold" Grid.Column="1" SelectedDate ="{Binding Data_Inici}" SelectedDateFormat="Short" Margin="10,4,16,5" Grid.ColumnSpan="2" Background="#FF060000" />
 
-        <Label Content="Data_Final" Grid.Row="6" Grid.Column="0" Margin="17,0,27,5"/>
-        <DatePicker Name="Data_Final" Grid.Column="1" Grid.Row="6"  SelectedDate ="{Binding Data_Final}"  SelectedDateFormat="Short" Margin="10,4,16,1" Grid.ColumnSpan="2"/>
+        <Label Content="Data_Final" FontWeight="Bold" Grid.Row="6" Grid.Column="0" Margin="17,3,27,2"/>
+        <DatePicker Name="Data_Final" Grid.Column="1" FontWeight="Bold" Grid.Row="6"  SelectedDate ="{Binding Data_Final}"  SelectedDateFormat="Short" Margin="10,4,16,5" Grid.ColumnSpan="2" Background="#FF0E0000"/>
 
-        <Label Content="Estat" Grid.Row="7" Grid.Column="0" Margin="17,4,27,8" />
+        <Label Content="Estat" FontWeight="Bold" Grid.Row="7" Grid.Column="0" Margin="17,4,27,8" />
 
-        <ComboBox Name="Estat" Grid.Row="7" Grid.Column="1" Text="{Binding Estat}" Margin="10,0,16,5" Grid.ColumnSpan="2"  >
-            <ComboBoxItem>TODO</ComboBoxItem>
-            <ComboBoxItem>DOING</ComboBoxItem>
-            <ComboBoxItem>DONE</ComboBoxItem>
+        <ComboBox Name="Estat" FontWeight="Bold" Grid.Row="7" Grid.Column="1" Text="{Binding Estat}" Margin="10,0,16,5" Grid.ColumnSpan="2"  >
+            <ComboBoxItem FontWeight="Bold">TODO</ComboBoxItem>
+            <ComboBoxItem FontWeight="Bold">DOING</ComboBoxItem>
+            <ComboBoxItem FontWeight="Bold">DONE</ComboBoxItem>
         </ComboBox>
 
-        <Button Name="btnUpdate2" Content="Create" Grid.Row="8" Margin="59,0,55,0" Click="Afegir_Tascas" Grid.ColumnSpan="2" RenderTransformOrigin="0.562,0.601" Grid.Column="1"/>
-        
-        
+        <Button Name="btnUpdate2" FontWeight="Bold" HorizontalContentAlignment="Center" Content="Create" Grid.Row="8" Margin="59,0,55,0" Click="Afegir_Tascas" Grid.ColumnSpan="2" RenderTransformOrigin="0.562,0.601" Grid.Column="1"/>
+
+
 
     </Grid>
 

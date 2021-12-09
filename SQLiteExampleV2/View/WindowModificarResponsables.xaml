@@ -5,33 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SQLiteExampleV2.View"
         mc:Ignorable="d"
-        Title="Modificar Responsable" Height="200" Width="300">
+        Title="Modificar Responsable" MaxHeight="240" MaxWidth="400">
     <Grid Margin="10,10,10,10" Background="#FFA9A9A9">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="6"/>
+            <RowDefinition Height="21.96"/>
+            <RowDefinition Height="25.587"/>
+            <RowDefinition Height="Auto" MinHeight="29.96"/>
+            <RowDefinition Height="29.12"/>
+            <RowDefinition Height="18"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="8*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="111*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="116*"/>
+            <ColumnDefinition Width="54*"/>
+            <ColumnDefinition Width="31*"/>
         </Grid.ColumnDefinitions>
 
-        <Label Content="Id:" Grid.Row="0" Grid.Column="0"></Label>
-        <TextBlock Name="Id" Grid.Row="0" Grid.Column="1" Text="{Binding Id}"></TextBlock>
+        <Label Content="Id:" FontWeight="Bold" Grid.Row="2" Grid.Column="2" Margin="1,0,0,23" Grid.RowSpan="2"/>
+        <TextBlock Name="Id" FontWeight="Bold"  Text="{Binding Id}" Grid.Column="4" Margin="5,4,0,3" Grid.Row="2" Grid.ColumnSpan="2" />
 
-        <Label Content="Nom:" Grid.Row="1" Grid.Column="0"></Label>
-        <TextBox Name="Name" Grid.Row="1" Grid.Column="1" Text="{Binding Name}" Margin="6,2,4,3"/>
+        <Label Content="Nom:" FontWeight="Bold" Grid.Column="2" Margin="1,0,0,2" Grid.Row="3"/>
+        <TextBox Name="Name" FontWeight="Bold" Grid.Row="3" Grid.Column="4" Text="{Binding Name}" Margin="5,2,0,3" Grid.ColumnSpan="2"/>
 
-        <Label Content="Cognom:" Grid.Row="2" Grid.Column="0"></Label>
-        <TextBox Name="LastName" Grid.Row="2" Grid.Column="1" Text="{Binding LastName}" Margin="5,2,4,3"></TextBox>
+        <Label Content="Cognom:" FontWeight="Bold" Grid.Row="4" Grid.Column="2" Margin="1,1,0,3"/>
+        <TextBox Name="LastName" FontWeight="Bold" Grid.Row="4" Grid.Column="4" Text="{Binding LastName}" Margin="5,4,0,5" Grid.ColumnSpan="2"/>
 
-        <Label Content="Data Naixement:" Grid.Row="3" Grid.Column="0"></Label>
-        <DatePicker Name="BirthDate" Grid.Row="3" Grid.Column="1" SelectedDate ="{Binding Birthday}" SelectedDateFormat="Short" Margin="6,4,4,8"/>
+        <Label Content="Data Naixement:" FontWeight="Bold" Grid.Row="5" Grid.Column="2" Margin="0,0,0,3"/>
+        <DatePicker Name="BirthDate" FontWeight="Bold" Grid.Row="5" Grid.Column="4" SelectedDate ="{Binding Birthday}" SelectedDateFormat="Short" Margin="5,4,0,2" Grid.ColumnSpan="2" Background="#FF1D0707"/>
 
-        <Button Name="btnUpdate" Content="Desa" Grid.Row="4" Grid.Column="1" Margin="6,7,4,10" Click="ModificarReponsable_Click"/>
+        <Button Name="btnUpdate" FontWeight="Bold" Content="Desa" Grid.Row="7" Margin="5,3,4,4" Click="ModificarReponsable_Click" Grid.Column="4"/>
 
     </Grid>
 </Window>

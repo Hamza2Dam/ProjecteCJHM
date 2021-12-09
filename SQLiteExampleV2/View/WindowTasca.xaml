@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SQLiteExampleV2.View"
         mc:Ignorable="d"
-        Title="Tasca" Height="300" MaxWidth="780" Loaded="Window_Loaded2">
+        Title="Tasca" Height="300" Width="790" Loaded="Window_Loaded2">
     <Grid Background="#FFA9A9A9">
 
         <DataGrid x:Name="dgTasca" VerticalAlignment="Top" HorizontalAlignment="Left" Width="Auto"

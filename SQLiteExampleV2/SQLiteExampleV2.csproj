@@ -7,6 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Capture1.JPG" />
+    <None Remove="Capture2.JPG" />
+    <None Remove="Capture3.JPG" />
+    <None Remove="Capture4.JPG" />
+    <None Remove="Capture5.JPG" />
+    <None Remove="Resources\Capture1.JPG" />
+    <None Remove="Resources\Capture2.JPG" />
+    <None Remove="Resources\Capture3.JPG" />
+    <None Remove="Resources\Capture4.JPG" />
+    <None Remove="Resources\Capture5.JPG" />
     <None Remove="Util\database.sql" />
   </ItemGroup>
 
@@ -17,6 +27,14 @@
   <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.4.4" />
     <PackageReference Include="System.Data.SQLite" Version="1.0.115.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Capture1.JPG" />
+    <Resource Include="Resources\Capture2.JPG" />
+    <Resource Include="Resources\Capture3.JPG" />
+    <Resource Include="Resources\Capture4.JPG" />
+    <Resource Include="Resources\Capture5.JPG" />
   </ItemGroup>
 
 </Project>

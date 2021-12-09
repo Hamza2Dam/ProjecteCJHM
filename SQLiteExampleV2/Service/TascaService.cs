@@ -176,9 +176,10 @@ namespace SQLiteExampleV2.Service
         public int Update(Tasca tasca)
         {
             int rows_afected = 0;
+
             using (var ctx = DbContext.GetInstance())
             {
-                string query = "UPDATE Tasca SET Nom = ?, Descripcio = ?, Responsable = ?, Colors = ?,  Data_Inici = ?, Data_Final = ?, Estat = ? WHERE Codi = ?";
+                string query = "UPDATE Tasca SET Nom = ?, Descripcio = ?, Responsable = ? , Colors = ?,  Data_Inici = ?, Data_Final = ?, Estat = ? WHERE Codi = ?";
                 using (var command = new SQLiteCommand(query, ctx))
                 {
                     command.Parameters.Add(new SQLiteParameter("Nom", tasca.Nom));

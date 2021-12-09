@@ -28,10 +28,15 @@ namespace SQLiteExampleV2
     {
         Tasca oTasca;
 
+
         public MainWindow()
         {
             InitializeComponent();
+
+
         }
+
+
 
         public MainWindow(Tasca tasca)
         {

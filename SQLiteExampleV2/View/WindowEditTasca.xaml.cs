@@ -42,10 +42,11 @@ namespace SQLiteExampleV2.View
         {
             try
             {
-                
-                TascaService tascaService = new TascaService();
-               
 
+                TascaService tascaService = new TascaService();
+
+                User responsable = (User)Responsable.SelectedItem;
+                oTasca.Responsable = responsable.Name;
                 tascaService.Update(oTasca);
                 this.Close();
             }
@@ -56,14 +57,11 @@ namespace SQLiteExampleV2.View
             }
         }
 
-        private void Window_Loaded4(object sender, RoutedEventArgs e)
+        private void Window_Loaded5(object sender, RoutedEventArgs e)
         {
             //Enllacem el control visual amb les dades
             Responsable.ItemsSource = UserService.GetAll();
         }
-
-
-
 
     }
 }

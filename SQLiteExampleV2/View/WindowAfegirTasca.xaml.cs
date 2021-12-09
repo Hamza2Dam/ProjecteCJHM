@@ -36,9 +36,6 @@ namespace SQLiteExampleV2.View
             oTasca = tasca;
             this.DataContext = tasca;
 
-
-
-
         }
 
         // Afegir Tasca
@@ -51,7 +48,6 @@ namespace SQLiteExampleV2.View
 
                 t.Nom = Nom.Text;
                 t.Descripcio = Descripcio.Text;
-                // t.Responsable = (string)Responsable.SelectedItem;
                 User responsable = (User)Responsable.SelectedItem;
                 t.Responsable = responsable.Name;
                 t.Colors = Colors.Text;
