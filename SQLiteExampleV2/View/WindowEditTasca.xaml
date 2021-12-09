@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SQLiteExampleV2.View"
         mc:Ignorable="d"
-        Title="Edit Tascas" MaxHeight="400" MaxWidth="350" >
+        Title="Edit Tascas" MaxHeight="420" MaxWidth="350">
     <Grid Margin="10,10,10,10" Background="#FFA9A9A9" Loaded="Window_Loaded5">
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>

@@ -11,12 +11,10 @@
     <None Remove="Capture2.JPG" />
     <None Remove="Capture3.JPG" />
     <None Remove="Capture4.JPG" />
-    <None Remove="Capture5.JPG" />
     <None Remove="Resources\Capture1.JPG" />
     <None Remove="Resources\Capture2.JPG" />
     <None Remove="Resources\Capture3.JPG" />
     <None Remove="Resources\Capture4.JPG" />
-    <None Remove="Resources\Capture5.JPG" />
     <None Remove="Util\database.sql" />
   </ItemGroup>
 
@@ -34,7 +32,6 @@
     <Resource Include="Resources\Capture2.JPG" />
     <Resource Include="Resources\Capture3.JPG" />
     <Resource Include="Resources\Capture4.JPG" />
-    <Resource Include="Resources\Capture5.JPG" />
   </ItemGroup>
 
 </Project>

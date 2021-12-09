@@ -37,15 +37,19 @@ namespace SQLiteExampleV2.View
             this.DataContext = tasca;
         }
 
+        private void Window_Loaded5(object sender, RoutedEventArgs e)
+        {
+            //Enllacem el control visual amb les dades
+            Responsable.ItemsSource = UserService.GetAll();
+        }
+
         // Edit Tasca
         private void Edit_Tasca(object sender, RoutedEventArgs e)
         {
             try
             {
 
-                TascaService tascaService = new TascaService();
-
-              
+                TascaService tascaService = new TascaService();             
                 tascaService.Update(oTasca);
                 this.Close();
             }
@@ -54,12 +58,6 @@ namespace SQLiteExampleV2.View
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void Window_Loaded5(object sender, RoutedEventArgs e)
-        {
-            //Enllacem el control visual amb les dades
-            Responsable.ItemsSource = UserService.GetAll();
         }
 
     }
