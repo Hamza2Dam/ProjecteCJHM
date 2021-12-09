@@ -68,8 +68,20 @@ namespace SQLiteExampleV2
 
         private void VeureTasca_Button_Click(object sender, RoutedEventArgs e)
         {
-            WindowTasca form = new WindowTasca();
-            form.ShowDialog();
+            if (lbOne.SelectedItem != null)
+            {
+                try
+                {
+                    Tasca oTasca = (Tasca)lbOne.SelectedItem;
+                    WindowEditTasca form = new WindowEditTasca(oTasca);
+                    form.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
         }
 
         // RESPONSABLE
