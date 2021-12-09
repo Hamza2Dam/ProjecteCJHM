@@ -45,8 +45,7 @@ namespace SQLiteExampleV2.View
 
                 TascaService tascaService = new TascaService();
 
-                User responsable = (User)Responsable.SelectedItem;
-                oTasca.Responsable = responsable.Name;
+              
                 tascaService.Update(oTasca);
                 this.Close();
             }
