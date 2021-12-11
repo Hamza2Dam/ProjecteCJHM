@@ -193,6 +193,7 @@ namespace SQLiteExampleV2.Service
 
                     rows_afected = command.ExecuteNonQuery();
                 }
+
             }
 
             return rows_afected;

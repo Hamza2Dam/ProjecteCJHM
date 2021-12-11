@@ -5,47 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SQLiteExampleV2"
         mc:Ignorable="d"
-        Title="TO DO "  Height="500"  Width="880"  Loaded="Window_Loaded_MAIN">
+        Title="TO DO "  Height="500"  Width="880"  SizeToContent="WidthAndHeight" Loaded="Window_Loaded_MAIN">
 
-    <Grid Background="#FFA9A9A9">
-        <Grid.FocusVisualStyle>
-            <Style/>
-        </Grid.FocusVisualStyle>
+    <Grid>
+
+
+        <Grid.Background>
+            <ImageBrush ImageSource="../Resources/Background.JPG" />
+        </Grid.Background>
+
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="30"/>
             <ColumnDefinition Width="50"/>
-            <ColumnDefinition Width="31"/>
+            <ColumnDefinition Width="30"/>
             <ColumnDefinition Width="190"/>
             <ColumnDefinition Width="9"/>
             <ColumnDefinition Width="21"/>
-            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="9"/>
             <ColumnDefinition Width="21"/>
-            <ColumnDefinition Width="6"/>
-            <ColumnDefinition Width="190"/>
-            <ColumnDefinition Width="11"/>
-            <ColumnDefinition Width="16"/>
-            <ColumnDefinition Width="16"/>
-            <ColumnDefinition Width="16"/>
             <ColumnDefinition Width="9"/>
             <ColumnDefinition Width="190"/>
-            <ColumnDefinition Width="64"/>
+            <ColumnDefinition Width="9"/>
+            <ColumnDefinition Width="21"/>
+            <ColumnDefinition Width="9"/>
+            <ColumnDefinition Width="21"/>
+            <ColumnDefinition Width="9"/>
+            <ColumnDefinition Width="190"/>
+            <ColumnDefinition Width="9"/>
+            <ColumnDefinition Width="52.5"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="43.04"/>
-            <RowDefinition Height="6.96"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="2"/>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="8.04"/>
+            <RowDefinition Height="2"/>
             <RowDefinition Height="50"/>
+            <RowDefinition Height="4"/>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="8"/>
+            <RowDefinition Height="2"/>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="156"/>
-            <RowDefinition Height="77.96"/>
+            <RowDefinition Height="4"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="233.96"/>
         </Grid.RowDefinitions>
 
-        <ListBox Name="lbOne" ScrollViewer.VerticalScrollBarVisibility="Visible" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="2" Grid.RowSpan="8" Margin="0,5,0,0" FontWeight="Bold" FontFamily="Arial Black" Width="189" >
+        <ListBox Name="lbOne" HorizontalAlignment="Center"  VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Column="3" Grid.Row="3" Grid.RowSpan="11" FontWeight="Bold" FontFamily="Arial Black" Width="188" Height="381" SelectionChanged="lbOne_SelectionChanged" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
 
@@ -69,7 +76,7 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <ListBox x:Name="lbTwo" ScrollViewer.VerticalScrollBarVisibility="Visible" HorizontalAlignment="Center" Grid.Column="9" Margin="0,4,0,0" Grid.RowSpan="8" Grid.Row="2" FontWeight="Bold" FontFamily="Arial Black" Width="182" >
+        <ListBox x:Name="lbTwo" ScrollViewer.VerticalScrollBarVisibility="Visible" HorizontalAlignment="Center"  VerticalAlignment="Top" Grid.Column="9" Grid.RowSpan="11" Grid.Row="3" FontWeight="Bold" FontFamily="Arial Black" Width="188" Height="381" SelectionChanged="lbTwo_SelectionChanged" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
 
@@ -93,7 +100,7 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <ListBox x:Name="lbThree" ScrollViewer.VerticalScrollBarVisibility="Visible" HorizontalAlignment="Center" Grid.Column="15" Grid.Row="2" Grid.RowSpan="8" Margin="0,5,0,0" FontWeight="Bold" FontFamily="Arial Black" Width="188">
+        <ListBox x:Name="lbThree" ScrollViewer.VerticalScrollBarVisibility="Visible" HorizontalAlignment="Center"  VerticalAlignment="Top" Grid.Column="15" Grid.Row="3" Grid.RowSpan="11" FontWeight="Bold" FontFamily="Arial Black" Width="188" Height="381" SelectionChanged="lbThree_SelectionChanged" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
 
@@ -119,49 +126,69 @@
 
 
 
-        <TextBlock Height="43" Text="TO DO" FontSize="25" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center"  VerticalAlignment="Center" Grid.Column="3" Width="176" Grid.Row="1" />
-        <TextBlock Height="43" Text="DOING" FontSize="25" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center"  VerticalAlignment="Center"  Grid.Column="9" Width="176" Grid.Row="1" />
-        <TextBlock Height="43" Text="DONE"  FontSize="25" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center"  VerticalAlignment="Center"  Grid.Column="15" Width="176" Grid.Row="1" />
+        <TextBlock Height="40" Text="TO DO" FontSize="25" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center"  VerticalAlignment="Center" Grid.Column="3" Background="AliceBlue" Width="188" Grid.Row="1" />
+        <TextBlock Height="44" Text="DOING" FontSize="25" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center"  VerticalAlignment="Center"  Grid.Column="9" Background="AliceBlue" Width="188" Grid.Row="1" />
+        <TextBlock Height="44" Text="DONE"  FontSize="25" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center"  VerticalAlignment="Center"  Grid.Column="15" Background="AliceBlue"  Width="188" Grid.Row="1" />
 
-        <Button Name="AfegirTasca_Button" Click="AfegirTasca_Button_Click" Grid.Column="1" Grid.RowSpan="2" Grid.Row="1" >
+        <Button Name="AfegirTasca_Button" Click="AfegirTasca_Button_Click" Grid.Column="1" Grid.RowSpan="2" Grid.Row="1" Background="White" >
             <StackPanel>
-                <Image Source="../Resources/Capture1.jpg"/>
+                <Image Source="../Resources/Capture1.JPG"/>
             </StackPanel>
         </Button>
 
-        <Button  Name="AfegirResponsable_Button" Click="AfegirResponsable_Button_Click" Grid.Column="1" Grid.Row="5" Margin="0,2,0,0">
+        <Button  Name="VeureTasca"  Click="VeureTasca_Button_Click" Grid.Column="1" Grid.Row="4" Background="#FFFFF4F4">
+            <StackPanel>
+                <Image Source="../Resources/Capture2.JPG" Width="49" Height="45"/>
+
+            </StackPanel>
+        </Button>
+
+        <Button Name="VeureTotesTasca" Grid.Column="1" Grid.Row="6" Height="50" Width="50" Click="VeureTotesTasca_Button_Click" Background="White">
+            <StackPanel>
+                <Image Source="../Resources/Capture3.JPG" Width="49" Height="45"/>
+            </StackPanel>
+        </Button>
+
+        <Button  Name="AfegirResponsable_Button" Click="AfegirResponsable_Button_Click" Grid.Column="1" Grid.Row="8" Background="White">
             <DockPanel>
-                <Image Source="../Resources/Capture2.jpg"/>
+                <Image Source="../Resources/Capture4.JPG"/>
             </DockPanel>
         </Button>
 
-        <Button  Name="VeureTasca"  Click="VeureTasca_Button_Click" Grid.Column="1" Grid.Row="3">
+        <Button  Name="VeureResponsables" Click="VeureResponsables_Button_Click" Grid.Column="1" Grid.Row="10" Background="White">
             <StackPanel>
-                <Image Source="../Resources/Capture3.jpg" Width="53" Height="48"/>
-
+                <Image Source="../Resources/Capture5.JPG" Height="46"/>
             </StackPanel>
         </Button>
 
-        <Button  Name="VeureResponsables" Click="VeureResponsables_Button_Click" Grid.Column="1" Grid.Row="5" Margin="0,50,0,0" Grid.RowSpan="2">
+        <Button Grid.Column="1" HorizontalAlignment="Center" Grid.Row="12" VerticalAlignment="Center" Width="50" Height="50" Click="Delete_Tasca" Background="White" >
             <StackPanel>
-                <Image Source="../Resources/Capture4.jpg" Height="58"/>
+                <Image Source="../Resources/Capture6.JPG" Height="46" Width="45"/>
             </StackPanel>
         </Button>
 
-        <Button Grid.Column="1" HorizontalAlignment="Center" Grid.Row="8" VerticalAlignment="Center" Width="50" Height="50" Click="Delete_Tasca" >
+        <Button FontSize="25" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Button_DOING_TODO" Grid.Column="5" Height="102" Width="21" Grid.Row="7" Grid.RowSpan="4" Visibility="Visible" Background="#FFFFFEFE">
             <StackPanel>
-                <Image Source="C:\Users\mshum\Desktop\ProjecteCJHM_Github\SQLiteExampleV2\Resources\Capture6.jpg" Height="46"/>
+                <Image Source="../Resources/1.JPG" Height="100" Width="18"/>
+            </StackPanel>
+        </Button>
+        <Button FontSize="25" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Button_TODO_DOING" Grid.Column="7" Height="102" Width="21" Grid.Row="7" Grid.RowSpan="4" Background="White">
+            <StackPanel>
+                <Image Source="../Resources/2.JPG" Height="100" Width="18"/>
+            </StackPanel>
+        </Button>
+        <Button FontSize="25" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Button_DONE_DOING" Grid.Column="11" Height="102" Width="21" Grid.Row="7" Grid.RowSpan="4" Background="White">
+            <StackPanel>
+                <Image Source="../Resources/1.JPG" Height="100" Width="18"/>
+            </StackPanel>
+        </Button>
+        <Button FontSize="25" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Button_DOING_DONE" Grid.Column="13" Height="102" Width="21" Grid.Row="7" Grid.RowSpan="4" Background="#FFFDF8F8">
+            <StackPanel>
+                <Image Source="../Resources/2.JPG" Height="100" Width="18"/>
             </StackPanel>
         </Button>
 
-
-
-        <Button Content="&lt;"   FontSize="25" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Button_DOING_TODO" Grid.Column="5" Height="50" Width="32" Grid.Row="6"/>
-        <Button Content="&gt;"   FontSize="25" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Button_TODO_DOING" Grid.Column="7" Height="50" Width="22" Grid.Row="6"/>
-        <Button Content="&lt;"   FontSize="25" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Button_DONE_DOING" Grid.Column="11" Height="50" Width="32" Grid.Row="6"/>
-        <Button Content="&gt;"   FontSize="25" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Button_DOING_DONE" Grid.Column="13" Height="50" Width="24" Grid.Row="6"/>
-
-        <Border BorderThickness="3" BorderBrush="#FF808080" Margin="0,0,0,3" Grid.Column="3" Grid.Row="1"/>
+        <Border BorderThickness="3" BorderBrush="#FF808080" Grid.Column="3" Grid.Row="1"/>
         <Border BorderThickness="3" BorderBrush="#FF808080" Grid.Column="9" Grid.Row="1"/>
         <Border BorderThickness="3" BorderBrush="#FF808080" Grid.Column="15" Grid.Row="1"/>
 

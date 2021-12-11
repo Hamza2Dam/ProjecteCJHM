@@ -45,43 +45,5 @@ namespace SQLiteExampleV2.View
             dgTasca.ItemsSource = TascaService.GetALL();
 
         }
-
-        // EditTasca
-        private void EditTasca(object sender, RoutedEventArgs e)
-        {
-            Tasca oTasca = (Tasca)dgTasca.SelectedItem;
-            WindowEditTasca w = new WindowEditTasca(oTasca);
-            w.ShowDialog();
-        }
-
-        // DeleteTasca
-        private void DeleteTasca(object sender, RoutedEventArgs e)
-        {
-            if (MessageBox.Show("¿Eliminar Tasca  seleccionado?", "Eliminar", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
-            {
-                try
-                {
-                    //Agafem les dades del item seleccionat
-                    Tasca oTasca = (Tasca)dgTasca.SelectedItem;
-
-                    //Eliminen usuari
-                    TascaService oService = new TascaService();
-                    oService.Delete(oTasca.Codi);
-
-                    //Actualitzem dades del grid
-                    dgTasca.ItemsSource = TascaService.GetALL();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-
-        }
-
-        private void dgTasca_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
     }
 }

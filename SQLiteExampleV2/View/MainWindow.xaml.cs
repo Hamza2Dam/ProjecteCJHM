@@ -56,6 +56,7 @@ namespace SQLiteExampleV2
             DbContext.Up();
         }
 
+        // Refresh
         private void Refresh()
         {
             lbOne.ItemsSource = TascaService.GetTODO();
@@ -63,20 +64,22 @@ namespace SQLiteExampleV2
             lbThree.ItemsSource = TascaService.GetDONE();
         }
 
-        // TASCAS
+        // Afegir una Tasca
         private void AfegirTasca_Button_Click(object sender, RoutedEventArgs e)
         {
             WindowAfegirTasca form = new WindowAfegirTasca();
             form.ShowDialog();
             Refresh();
         }
-
+        // Veure una Tasca i Editar
         private void VeureTasca_Button_Click(object sender, RoutedEventArgs e)
         {
-            if (lbOne.SelectedItem != null)
+            if (lbOne.SelectedItem != null )
             {
+
                 try
                 {
+
                     Tasca oTasca = (Tasca)lbOne.SelectedItem;
                     WindowEditTasca form = new WindowEditTasca(oTasca);
                     form.ShowDialog();
@@ -85,7 +88,6 @@ namespace SQLiteExampleV2
                 {
                     MessageBox.Show(ex.Message);
                 }
-
             }
 
             else if (lbTwo.SelectedItem != null)
@@ -100,8 +102,8 @@ namespace SQLiteExampleV2
                 {
                     MessageBox.Show(ex.Message);
                 }
-
             }
+
             else if (lbThree.SelectedItem != null)
             {
                 try
@@ -114,29 +116,25 @@ namespace SQLiteExampleV2
                 {
                     MessageBox.Show(ex.Message);
                 }
-
             }
+
+
         }
-
-
-        private void Butto(object sender, RoutedEventArgs e)
+        // Veure Totes les Tascas
+        private void VeureTotesTasca_Button_Click(object sender, RoutedEventArgs e)
         {
-            if (lbOne.SelectedItem != null)
+            try
             {
-                try
-                {
-                    Tasca oTasca = (Tasca)lbOne.SelectedItem;
-                    WindowEditTasca form = new WindowEditTasca(oTasca);
-                    form.ShowDialog();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-
+                WindowTasca form = new WindowTasca();
+                form.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
+        // Eliminar Tascas
         private void Delete_Tasca(object sender, RoutedEventArgs e)
         {
             if (lbOne.SelectedItem != null)
@@ -157,14 +155,50 @@ namespace SQLiteExampleV2
                 {
                     MessageBox.Show(ex.Message);
                 }
+            }
 
+            else if (lbTwo.SelectedItem != null)
+            {
+                try
+                {
+                    //Agafem les dades del item seleccionat
+                    Tasca oTasca = (Tasca)lbTwo.SelectedItem;
 
+                    //Eliminen usuari
+                    TascaService oService = new TascaService();
+                    oService.Delete(oTasca.Codi);
+
+                    //Actualitzem dades del grid
+                    Refresh();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            else if (lbThree.SelectedItem != null)
+            {
+                try
+                {
+                    //Agafem les dades del item seleccionat
+                    Tasca oTasca = (Tasca)lbThree.SelectedItem;
+
+                    //Eliminen usuari
+                    TascaService oService = new TascaService();
+                    oService.Delete(oTasca.Codi);
+
+                    //Actualitzem dades del grid
+                    Refresh();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
-
-
-            // RESPONSABLE
+        // Afegir Responsables
         private void AfegirResponsable_Button_Click(object sender, RoutedEventArgs e)
         {
             WindowAfegirResponsables form = new WindowAfegirResponsables();
@@ -172,6 +206,7 @@ namespace SQLiteExampleV2
             Refresh();
         }
 
+        // Veure Responsables
         private void VeureResponsables_Button_Click(object sender, RoutedEventArgs e)
         {
             WindowResponsables form = new WindowResponsables();
@@ -287,5 +322,22 @@ namespace SQLiteExampleV2
             }
         }
 
+        private void lbOne_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            lbTwo.SelectedIndex = -1;
+            lbThree.SelectedIndex = -1;
+        }
+
+        private void lbTwo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            lbThree.SelectedIndex = -1;
+            lbOne.SelectedIndex = -1;
+        }
+
+        private void lbThree_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            lbTwo.SelectedIndex = -1;
+            lbOne.SelectedIndex = -1;
+        }
     }
 }

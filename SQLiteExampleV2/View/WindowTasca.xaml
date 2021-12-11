@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SQLiteExampleV2.View"
         mc:Ignorable="d"
-        Title="Tasca" Height="300" Width="790" Loaded="Window_Loaded2">
+        Title="Tasca" Height="300" Width="750" Loaded="Window_Loaded2">
     <Grid Background="#FFA9A9A9">
 
         <DataGrid x:Name="dgTasca" VerticalAlignment="Top" HorizontalAlignment="Left" Width="Auto"
-          AutoGenerateColumns="False" CanUserResizeColumns="True" CanUserAddRows="False" SelectionChanged="dgTasca_SelectionChanged" >
+          AutoGenerateColumns="False" CanUserResizeColumns="True" CanUserAddRows="False">
 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Codi" IsReadOnly="True" Binding="{Binding Codi}" Width="40"/>
@@ -35,31 +35,11 @@
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
 
-
-                <DataGridTextColumn Header="Data Final" IsReadOnly="True" Binding="{Binding Data_Final}" Width="Auto"/>
                 <DataGridTextColumn Header="Data Inici" IsReadOnly="True" Binding="{Binding Data_Inici}" Width="Auto"/>
+                <DataGridTextColumn Header="Data Final" IsReadOnly="True" Binding="{Binding Data_Final}" Width="Auto"/>
                 <DataGridTextColumn Header="Estat" IsReadOnly="True" Binding="{Binding Estat}" Width="50"/>
 
-                <DataGridTemplateColumn Header="Editar" Width="Auto" >
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Content="Editar Tasca" Click="EditTasca" />
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-
-                <DataGridTemplateColumn Header="Eliminar" Width="Auto" >
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Content="EliminarTasca" Click="DeleteTasca" />
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-
-
             </DataGrid.Columns>
-
-
 
         </DataGrid>
 

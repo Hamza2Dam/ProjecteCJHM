@@ -17,26 +17,28 @@
             <RowDefinition Height="35"/>
             <RowDefinition Height="35"/>
             <RowDefinition Height="35"/>
-            <RowDefinition Height="35"/>
-            <RowDefinition Height="35"/>
+            <RowDefinition Height="16"/>
+            <RowDefinition Height="27.373"/>
+            <RowDefinition Height="26.627"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="95*"/>
-            <ColumnDefinition Width="112*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="96*"/>
+            <ColumnDefinition Width="73*"/>
         </Grid.ColumnDefinitions>
 
-        <Label  Content="Codi:" FontWeight="Bold" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="0" Margin="17,0,27,5"/>
-        <TextBlock Name="Codi" FontWeight="Bold" TextBlock.TextAlignment="Center" Grid.Row="0" Grid.Column="1" Text="{Binding Codi}" Margin="9,4,16,5" Grid.ColumnSpan="2" />
+        <Label  Content="Codi:" FontWeight="Bold" Grid.Row="0" Grid.Column="0" Margin="17,0,27,5"/>
+        <TextBlock Name="Codi" FontWeight="Bold" Grid.Row="0" Grid.Column="2" Text="{Binding Codi}" Margin="0,4,16,5" Grid.ColumnSpan="2" />
 
         <Label Content="Nom:" FontWeight="Bold"  Grid.Row="1" Grid.Column="0" Margin="17,0,27,5"/>
-        <TextBox Name="Nom" FontWeight="Bold" HorizontalContentAlignment="Center" Grid.Row="1" Grid.Column="1" Text="{Binding Nom}"  Margin="10,2,16,5" Grid.ColumnSpan="2"/>
+        <TextBox Name="Nom" FontWeight="Bold" Grid.Row="1" Grid.Column="2" Text="{Binding Nom}"  Margin="1,2,10,5" Grid.ColumnSpan="2"/>
 
         <Label Content="Descripcio:" FontWeight="Bold" Grid.Row="2" Grid.Column="0" Margin="17,0,27,5" ></Label>
-        <TextBox Name="Descripcio" FontWeight="Bold" HorizontalContentAlignment="Center" Grid.Row="2" Grid.Column="1" Text="{Binding Descripcio}" Margin="10,2,16,5" Grid.ColumnSpan="2"/>
+        <TextBox Name="Descripcio" FontWeight="Bold" Grid.Row="2" Grid.Column="2" Text="{Binding Descripcio}" Margin="1,2,10,5" Grid.ColumnSpan="2"/>
 
         <Label Content="Responsable:" FontWeight="Bold" Grid.Row="3" Grid.Column="0" Margin="17,2,27,8" />
-        <ComboBox Name="Responsable" FontWeight="Bold" Grid.Row="3" Grid.Column="1" Text="{Binding Responsable}" Margin="10,0,16,5" Grid.ColumnSpan="2"  >
+        <ComboBox Name="Responsable" FontWeight="Bold" Grid.Row="3" Grid.Column="2" Text="{Binding Responsable}" Margin="1,0,10,5" Grid.ColumnSpan="2"  >
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -47,27 +49,26 @@
         </ComboBox>
 
         <Label Content="Colors:" FontWeight="Bold" Grid.Row="4" Grid.Column="0" Margin="17,0,27,8" />
-        <ComboBox Name="Colors" FontWeight="Bold" Grid.Row="4" Text="{Binding Colors}" Grid.ColumnSpan="2" Grid.Column="1" Margin="10,0,16,5"  >
+        <ComboBox Name="Colors" FontWeight="Bold" Grid.Row="4" Text="{Binding Colors}" Grid.ColumnSpan="2" Grid.Column="2" Margin="1,0,10,5"  >
             <ComboBoxItem Foreground="#FFFF0505" FontWeight="Bold" >RED</ComboBoxItem>
             <ComboBoxItem Foreground="#FFFFE800" FontWeight="Bold" >YELLOW</ComboBoxItem>
             <ComboBoxItem Foreground="#FF00FF23" FontWeight="Bold" >GREEN</ComboBoxItem>
         </ComboBox>
 
         <Label Content="Data Inici:" FontWeight="Bold" Grid.Row="5" Grid.Column="0" Margin="17,2,27,3"/>
-        <DatePicker Name="Data_Inici" Grid.Row="5" FontWeight="Bold" Grid.Column="1" SelectedDate ="{Binding Data_Inici}" SelectedDateFormat="Short" Margin="10,4,16,5" Grid.ColumnSpan="2" Background="#FF060000" />
+        <DatePicker Name="Data_Inici" Grid.Row="5" FontWeight="Bold" Grid.Column="2" SelectedDate ="{Binding Data_Inici}" SelectedDateFormat="Short" Margin="1,4,10,5" Grid.ColumnSpan="2" Background="#FF060000" />
 
         <Label Content="Data_Final" FontWeight="Bold" Grid.Row="6" Grid.Column="0" Margin="17,3,27,2"/>
-        <DatePicker Name="Data_Final" Grid.Column="1" FontWeight="Bold" Grid.Row="6"  SelectedDate ="{Binding Data_Final}"  SelectedDateFormat="Short" Margin="10,4,16,5" Grid.ColumnSpan="2" Background="#FF0E0000"/>
+        <DatePicker Name="Data_Final" Grid.Column="2" FontWeight="Bold" Grid.Row="6"  SelectedDate ="{Binding Data_Final}"  SelectedDateFormat="Short" Margin="1,4,10,5" Grid.ColumnSpan="2" Background="#FF0E0000"/>
 
         <Label Content="Estat" FontWeight="Bold" Grid.Row="7" Grid.Column="0" Margin="17,4,27,8" />
-
-        <ComboBox Name="Estat" FontWeight="Bold" Grid.Row="7" Grid.Column="1" Text="{Binding Estat}" Margin="10,0,16,5" Grid.ColumnSpan="2"  >
+        <ComboBox Name="Estat" FontWeight="Bold" Grid.Row="7" Grid.Column="2" Text="{Binding Estat}" Margin="1,0,10,5" Grid.ColumnSpan="2"  >
             <ComboBoxItem FontWeight="Bold">TODO</ComboBoxItem>
             <ComboBoxItem FontWeight="Bold">DOING</ComboBoxItem>
             <ComboBoxItem FontWeight="Bold">DONE</ComboBoxItem>
         </ComboBox>
 
-        <Button Name="btnUpdate2" FontWeight="Bold" HorizontalContentAlignment="Center" Content="Create" Grid.Row="8" Margin="59,0,55,0" Click="Afegir_Tascas" Grid.ColumnSpan="2" RenderTransformOrigin="0.562,0.601" Grid.Column="1"/>
+        <Button Name="btnUpdate2" FontWeight="Bold" HorizontalContentAlignment="Center" Content="Create" Grid.Row="9" Margin="1,0,1,0" Click="Afegir_Tascas" RenderTransformOrigin="0.66,0.598" Grid.Column="2"/>
 
 
 
