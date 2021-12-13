@@ -41,28 +41,35 @@ namespace SQLiteExampleV2.View
         // Afegir Tasca
         private void Afegir_Tascas(object sender, RoutedEventArgs e)
         {
-            try
+            if (Nom.Text != null && Descripcio.Text != null  && Responsable.SelectedItem != null && Colors.Text != null && Data_Inici.SelectedDate != null && Data_Final.SelectedDate != null  && Estat.Text != null)
             {
-                TascaService tascaService = new TascaService();
-                Tasca t = new Tasca();
+                try
+                {
+                    TascaService tascaService = new TascaService();
+                    Tasca t = new Tasca();
 
-                t.Nom = Nom.Text;
-                t.Descripcio = Descripcio.Text;
-                User responsable = (User)Responsable.SelectedItem;
-                t.Responsable = responsable.Name;
-                t.Colors = Colors.Text;
-                t.Data_Inici = (DateTime)Data_Inici.SelectedDate;
-                t.Data_Final = (DateTime)Data_Final.SelectedDate;
-                t.Estat = Estat.Text;
+                    t.Nom = Nom.Text;
+                    t.Descripcio = Descripcio.Text;
+                    User responsable = (User)Responsable.SelectedItem;
+                    t.Responsable = responsable.Name;
+                    t.Colors = Colors.Text;
+                    t.Data_Inici = (DateTime)Data_Inici.SelectedDate;
+                    t.Data_Final = (DateTime)Data_Final.SelectedDate;
+                    t.Estat = Estat.Text;
 
-                tascaService.Add(t);
-                this.Close();
+                    tascaService.Add(t);
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
+
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error: Ompliu tota la informació ");
             }
-            
         }
 
         private void Window_Loaded4(object sender, RoutedEventArgs e)
