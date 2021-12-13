@@ -58,6 +58,7 @@ namespace SQLiteExampleV2.View
                     t.Estat = Estat.Text;
 
                     tascaService.Add(t);
+
                     this.Close();
                 }
                 catch (Exception ex)

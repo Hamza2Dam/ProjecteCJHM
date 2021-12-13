@@ -40,7 +40,7 @@ namespace SQLiteExampleV2.View
         private void Window_Loaded5(object sender, RoutedEventArgs e)
         {
             //Enllacem el control visual amb les dades
-            Responsable.ItemsSource = UserService.GetAll();
+            cbResponsable.ItemsSource = UserService.GetAll();
         }
 
         // Edit Tasca
