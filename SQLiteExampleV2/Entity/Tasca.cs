@@ -8,7 +8,7 @@ namespace SQLiteExampleV2.Entity
 {
     public class Tasca
     {
-        public int Codi { get; set; }
+        public int Codi { get; set; } 
         public string Nom { get; set; }
         public string Descripcio { get; set; }
         public string Responsable { get; set; }

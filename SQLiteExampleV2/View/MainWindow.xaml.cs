@@ -137,63 +137,66 @@ namespace SQLiteExampleV2
         // Eliminar Tascas
         private void Delete_Tasca(object sender, RoutedEventArgs e)
         {
-            if (lbOne.SelectedItem != null)
+            if (MessageBox.Show("¿Eliminar Tasca seleccionada?", "Eliminar", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
-                try
+                if (lbOne.SelectedItem != null)
                 {
-                    //Agafem les dades del item seleccionat
-                    Tasca oTasca = (Tasca)lbOne.SelectedItem;
+                    try
+                    {
+                        //Agafem les dades del item seleccionat
+                        Tasca oTasca = (Tasca)lbOne.SelectedItem;
 
-                    //Eliminen usuari
-                    TascaService oService = new TascaService();
-                    oService.Delete(oTasca.Codi);
+                        //Eliminen usuari
+                        TascaService oService = new TascaService();
+                        oService.Delete(oTasca.Codi);
 
-                    //Actualitzem dades del grid
-                    Refresh();
+                        //Actualitzem dades del grid
+                        Refresh();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
-                catch (Exception ex)
+
+                else if (lbTwo.SelectedItem != null)
                 {
-                    MessageBox.Show(ex.Message);
+                    try
+                    {
+                        //Agafem les dades del item seleccionat
+                        Tasca oTasca = (Tasca)lbTwo.SelectedItem;
+
+                        //Eliminen usuari
+                        TascaService oService = new TascaService();
+                        oService.Delete(oTasca.Codi);
+
+                        //Actualitzem dades del grid
+                        Refresh();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
-            }
 
-            else if (lbTwo.SelectedItem != null)
-            {
-                try
+                else if (lbThree.SelectedItem != null)
                 {
-                    //Agafem les dades del item seleccionat
-                    Tasca oTasca = (Tasca)lbTwo.SelectedItem;
+                    try
+                    {
+                        //Agafem les dades del item seleccionat
+                        Tasca oTasca = (Tasca)lbThree.SelectedItem;
 
-                    //Eliminen usuari
-                    TascaService oService = new TascaService();
-                    oService.Delete(oTasca.Codi);
+                        //Eliminen usuari
+                        TascaService oService = new TascaService();
+                        oService.Delete(oTasca.Codi);
 
-                    //Actualitzem dades del grid
-                    Refresh();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-
-            else if (lbThree.SelectedItem != null)
-            {
-                try
-                {
-                    //Agafem les dades del item seleccionat
-                    Tasca oTasca = (Tasca)lbThree.SelectedItem;
-
-                    //Eliminen usuari
-                    TascaService oService = new TascaService();
-                    oService.Delete(oTasca.Codi);
-
-                    //Actualitzem dades del grid
-                    Refresh();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
+                        //Actualitzem dades del grid
+                        Refresh();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
             }
         }

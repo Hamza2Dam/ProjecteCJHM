@@ -41,7 +41,7 @@ namespace SQLiteExampleV2.View
         // Afegir Tasca
         private void Afegir_Tascas(object sender, RoutedEventArgs e)
         {
-            if (Nom.Text != null && Descripcio.Text != null  && Responsable.SelectedItem != null && Colors.Text != null && Data_Inici.SelectedDate != null && Data_Final.SelectedDate != null  && Estat.Text != null)
+            if (Nom.Text != null && Descripcio.Text != null && Responsable.SelectedItem != null && Colors.Text != null && Data_Inici.SelectedDate != null && Data_Final.SelectedDate != null  && Estat.Text != null)
             {
                 try
                 {

@@ -46,7 +46,7 @@ namespace SQLiteExampleV2.View
                 User r = new User();
                 r.Name = Name.Text;
                 r.LastName = LastName.Text;
-                r.Birthday = (DateTime)Birthday.SelectedDate; ;
+                r.Birthday = (DateTime)Birthday.SelectedDate; 
 
                 userService.Add(r);
                 this.Close();
